@@ -1,22 +1,22 @@
 module.exports = {
-  title: `noopy.dev`,
+  title: `woodong's log`,
   description: `Blog posted about ...`,
-  author: `snoop2head`,
-  introduction: `📝 Learn enough to build an idea. 🛠 Concept it, show it to the world.`,
-  siteUrl: `https://noopy.dev/`, // Your blog site url
+  author: `woodongk`,
+  introduction: `📚📖 읽기의 차이가 글쓰기의 차이를 만든다`,
+  siteUrl: `https://woodong.netlify.app`, // Your blog site url
   social: {
     twitter: ``, // Your Twitter account
-    github: `snoop2head`, // Your GitHub account
+    github: `woodongk`, // Your GitHub account
     medium: '',
     facebook: '',
     facebook: ``, // Your Facebook account
-    linkedin: `young-jin-ahn-b28616117`, // Your LinkedIn account
+    linkedin: ``, // Your LinkedIn account
   },
   icon: `content/assets/felog.png`, // Add your favicon
-  keywords: [`blog`, `python`, `data`, `django`, `developer`],
+  keywords: [`blog`, `python`, `data`, `machine-learning`, `TIL`],
   comment: {
     disqusShortName: '', // Your disqus-short-name. check disqus.com.
-    utterances: 'snoop2head/noopy', // Your repository for archive comment
+    utterances: 'woodongk/woodong', // Your repository for archive comment
   },
   configs: {
     countOfInitialPost: 10, // Config your initial count of post

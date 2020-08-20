@@ -1,6 +1,6 @@
 ---
-title: 'Accessing Pandas Dataframe'
-date: 2020-07-02 16:21:13
+title: Test
+date: 2020-08-20 16:21:13
 category: 'data'
 draft: false
 ---

@@ -1,16 +1,18 @@
-# noopy.dev
+# woodong's blog
 
-[![Blog Badge](http://img.shields.io/badge/DevBlog-blueviolet?style=flat-square&logo=gatsby&link=https://noopy.dev/)](https://noopy.dev/)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/cfaedd66-22ca-4c31-8799-4b9f7372dafd/deploy-status)](https://app.netlify.com/sites/woodong/deploys)
 
-snoop2head writing about how to build things
+@[snoop2head](https://github.com/snoop2head)님 코드를 참고하였음
 
-## Guide for Installation
+## 설치 가이드
 
-```shell
-git clone https://github.com/snoop2head/noopy
-cd noopy
+```bash
+npm install -g gatsby-cli
+gatsby new my-blog-name https://github.com/woodongk/gatsby-starter-bee
+cd my-blog-name
 npm install
 gatsby build
+# start developing. open localhost:8000
 npm start
 ```
 
@@ -22,16 +24,11 @@ npm start
   * [assets](./contents/assets): profile image and felog image above it
   * [blog](./contents/blog): blog writings in Markdown file format
 
-## Moving Images After Writing
-
-Placing image with Typora editor creates image on the corresponding directory. Use python3 to 1) move the img files into each categories' images folder and 2) rewrite their paths notated on the markdown document.
-
-```python
-python3 app.py
-```
-
 ## Gatsby Template Reference
 
 * [gatsby-starter-bee](https://github.com/JaeYeopHan/gatsby-starter-bee)
 * [SOSO log](https://github.com/SoYoung210/SOSO)
+* [noopy](https://github.com/snoop2head/noopy)
 
+## Netlify 배포 참고 사이트 
+* https://delivan.dev/web/start-gatsby-blog/
