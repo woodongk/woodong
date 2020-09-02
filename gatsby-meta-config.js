@@ -2,18 +2,25 @@ module.exports = {
   title: `woodong's log`,
   description: `Blog posted about ...`,
   author: `woodongk`,
-  introduction: `📚📖 읽기의 차이가 글쓰기의 차이를 만든다`,
+  introduction: `📚📖 읽기의 차이가 글쓰기의 차이를 만든다. 데이터 공부하는 사람`,
   siteUrl: `https://woodong.netlify.app`, // Your blog site url
   social: {
     twitter: ``, // Your Twitter account
     github: `woodongk`, // Your GitHub account
     medium: '',
-    facebook: '',
     facebook: ``, // Your Facebook account
     linkedin: ``, // Your LinkedIn account
+    instagram: `wj__202`,
+    naver_blog: `gks3284`
   },
   icon: `content/assets/felog.png`, // Add your favicon
-  keywords: [`blog`, `python`, `data`, `machine-learning`, `TIL`],
+  keywords: [
+	`blog`, 
+	`python`, 
+	`data`, 
+	`machine-learning`, 
+	`TIL`
+],
   comment: {
     disqusShortName: '', // Your disqus-short-name. check disqus.com.
     utterances: 'woodongk/woodong', // Your repository for archive comment

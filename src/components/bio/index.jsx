@@ -50,6 +50,16 @@ export const Bio = () => (
                       LinkedIn
                     </a>
                   )}
+                  {social.instagram && (
+                    <a href={`https://www.instagram.com/${social.instagram}/`}>
+                      Instagram
+                    </a>
+                  )}
+                  {social.naver_blog && (
+                    <a href={`https://blog.naver.com/${social.naver_blog}/`}>
+                      Lifelog
+                    </a>
+                  )}
                 </p>
               </div>
             </div>
@@ -79,6 +89,8 @@ const bioQuery = graphql`
           medium
           facebook
           linkedin
+          instagram
+          naver_blog
         }
       }
     }
