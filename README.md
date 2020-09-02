@@ -1,8 +1,7 @@
 # woodong's blog
+[Netlify Status](https://app.netlify.com/sites/woodong/deploys)
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/cfaedd66-22ca-4c31-8799-4b9f7372dafd/deploy-status)](https://app.netlify.com/sites/woodong/deploys)
-
-@[snoop2head](https://github.com/snoop2head)님 코드를 참고하였음
+@[안영진](https://github.com/snoop2head)님 코드를 참고하였음
 
 ## 설치 가이드
 
@@ -16,19 +15,17 @@ gatsby build
 npm start
 ```
 
-## Guide for Customization
+### Netlify 배포 참고
+* https://delivan.dev/web/start-gatsby-blog/
 
-* [gatsby-meta-config.js](./gatsby-meta-config.js): blog meta data such as title, keywords etc.
-* [contents](./contents)
-  * [__about](./contents/about): writing about portfolio
-  * [assets](./contents/assets): profile image and felog image above it
-  * [blog](./contents/blog): blog writings in Markdown file format
+### Guide for Customization
+* [noopy](https://github.com/snoop2head/noopy)
 
-## Gatsby Template Reference
-
+### Gatsby Template Reference
 * [gatsby-starter-bee](https://github.com/JaeYeopHan/gatsby-starter-bee)
 * [SOSO log](https://github.com/SoYoung210/SOSO)
 * [noopy](https://github.com/snoop2head/noopy)
 
-## Netlify 배포 참고 사이트 
-* https://delivan.dev/web/start-gatsby-blog/
+### **주의사항**
+- ./content/blog/development/images/hello.png 와 ./content/blog/development//hello.md 파일 지우면 안 됨!지울 경우 블로그 새로 생성해야함 😱 원인 불명의 에러..
+
