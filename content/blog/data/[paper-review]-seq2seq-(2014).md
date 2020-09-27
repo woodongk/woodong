@@ -6,12 +6,15 @@ draft: false
 ---
 
 ## Sequence to Sequence Learning with Neural Networks (2014) 논문 리뷰 
+
 #### Summary
 - DNN cannot be used to map sequences to sequences. (DNN은 fixed dimension에만 적용가능하기에, 길이가 다른 두 sequence에 적용시키기에 적절하지 않다)
 - This paper presents **a general end-to-end approach to sequence learning** that makes minimal assumptions on the sequence structure. 
 - Their method uses a multilayered Long Short-Term Memory (LSTM) to map the input sequence to a vector of a fixed dimensionality, and then another deep LSTM to decode the target sequence from the vector. 
 
 ![](20200925-seq2seq/9C11E5E0-8069-4F41-A294-7041C45E0FB2.png)
+
+---
 
 ### Model
 
