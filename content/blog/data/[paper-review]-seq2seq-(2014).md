@@ -1,9 +1,10 @@
 ---
-title: [paper-review] seq2seq (2014)
-date: 2020-09-27 23:09:15
+title: [Paper-Review] Seq2Seq (2014)
+date: 2020-09-27 23:51:01
 category: data
 draft: false
 ---
+
 
 ## Sequence to Sequence Learning with Neural Networks (2014) 논문 리뷰 
 
