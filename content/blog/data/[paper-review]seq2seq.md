@@ -1,10 +1,9 @@
 ---
-title: [Paper-Review] Seq2Seq (2014)
-date:2020-09-27 23:51:01
+title: "[Paper Review] Seq2Seq (2014)"
+date: 2020-09-27 23:09:01
 category:data
-draft:false
+draft: false
 ---
-
 
 ## Sequence to Sequence Learning with Neural Networks (2014) 논문 리뷰 
 
@@ -53,7 +52,7 @@ y1, . . . , yT ′  is its corresponding output sequence whose length T ′ may 
 - 학습이 끝나면, 가장 적합한 translation 을 찾아서 translation 을 생성함
 	- with Beam Search Decoding!
     - ![](https://miro.medium.com/max/1534/1*SWd3C64RWUs07MHbjWL_mA.png)
-	- 출처 : The neural approaches to Natural Language Generation | by Qiurui Chen |  Medium
+	- 출처 : The neural approaches to Natural Language Generation/by Qiurui Chen/Medium
 
 #### Reversing the Source Sentences
 - LSTM learns much better when **the source sentences are reversed** (**the target sentences are not reversed**).
@@ -61,7 +60,7 @@ y1, . . . , yT ′  is its corresponding output sequence whose length T ′ may 
 #### Training details
 
 **architecture**
-- Deep LSTMs with 4 layers with 1000 celss at each layer
+- Deep LSTMs with 4 layers with 1000 cells at each layer
 - 1000 dimensional word embeddings, with input vocabs 160,000 and output vocabs 80,000
 - Softmax over 80,000 words at each output.
 
@@ -82,12 +81,9 @@ y1, . . . , yT ′  is its corresponding output sequence whose length T ′ may 
 - We used the cased BLEU score to evaluate the quality of our translations. 
 	- using multi-bleu.pl1 on the tokenized predictions and ground truth. 
 
-![](20200925-seq2seq/seq2seq table1.PNG)
+![](20200925-seq2seq/seq2seq-table1.PNG)
 - an ensemble of 5 LSTMs with a beam of size 2 is cheaper than of a single LSTM with a beam of size 12.
 
-![](20200925-seq2seq/seq2seq table2.PNG)
+![](20200925-seq2seq/seq2seq-table2.PNG)
 ![](20200925-seq2seq/comparison_baseline.PNG)
 - While the decoded translations of the LSTM ensemble do not beat the state of the art, it is the first time that a pure neural translation system outperforms a phrase-based SMT baseline on a large MT task
-
-
-
