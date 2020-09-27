@@ -1,8 +1,8 @@
 ---
-title: [Paper-Review] Seq2Seq (2014)
-date: 2020-09-27 23:51:01
-category: data
-draft: false
+title:[Paper-Review] Seq2Seq (2014)
+date:2020-09-27 23:51:01
+category:data
+draft:false
 ---
 
 
