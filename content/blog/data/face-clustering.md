@@ -8,15 +8,17 @@ draft: false
 > **Face Clustering** 은 비지도 학습(Unsupervised Learning) 기반의 얼굴 분류 알고리즘이다. 적은 수의 이미지만으로 얼굴 분류를 도전해보자.  
 
 ## Face Clustering
+
 사람의 얼굴을 분류한다는 것은 쉬운 일이 아니다. 개와 고양이 분류 모델도 많은 이미지들을 필요로 하듯이, 사람의 얼굴은 서로 특징이 비슷할 뿐만 아니라 비슷하면서도 다른 그 미묘한 차이를 구분해줘야 하기 때문. 그래서 **Face Clustering** 에서는 미리 학습된 신경망 모델의 힘을 빌린다. 
+
 ![](20200902-Face_clustering/image.png)
--> 놀랍게도 다른 사람
+⮕ 놀랍게도 다른 사람
 
 컴퓨터는 비교적 간단히 위 두 사람을 구분해낸다.
 
 - - - -
 
-**Face Clustering** 은 13,000 개의 얼굴 데이터로 사전에 훈련된 [딥러닝 모델](https://github.com/cmusatyalab/openface)을 통해 이미지로부터 사람의 얼굴을 인식하여 벡터로 임베딩한다. 이후 추출된 얼굴 벡터 값에 간단한 clustering 알고리즘을 적용시켜 얼굴을 분류한다. 초.간.단.
+**Face Clustering** 은 13,000 개의 얼굴 데이터로 사전에 훈련된 [딥러닝 모델](https://github.com/cmusatyalab/openface)을 통해 이미지로부터 사람의 얼굴을 인식하여 벡터로 임베딩한다. 이후 추출된 얼굴 벡터 값에 간단한 clustering 알고리즘을 적용시켜 얼굴을 분류한다. `초.간.단.`
 
 
 [알고리즘의 개발 저자가 작성한 글](https://www.pyimagesearch.com/2018/07/09/face-clustering-with-python/)에서는 본 알고리즘을 사용해서 5명의 축구선수 이미지 129장을 거의 정확하게 분류한 결과를 보여준다. 코드와 설명이 자세하게 나와있다.
@@ -24,11 +26,11 @@ draft: false
 - - - -
 ## Face Clustering 동작 원리
 
-**Step 1**
+**`Step 1`**
 1. 이미지에서 얼굴 추출
 2. 각각의 얼굴 이미지에서 사람의 눈, 코, 입, 턱의 위치와 윤곽을 잡아내고, 그것을 128 차원의 벡터로 인코딩. 이때 미리 학습시킨 딥러닝 모델을 사용
 
-**Step 2**
+**`Step 2`**
 3. DBSCAN을 이용하여 인코딩한 결과를 Clustering
 
 > 우리는 몇 명인지도 모르고 누가 누구인지도 모르는 얼굴 이미지들을 잔뜩 넣어주면 된다. 알고리즘이 알아서 분류해준다.   
@@ -102,11 +104,12 @@ print(len(data))
     [INFO] processing image 79/79
 
 현재 데이터는 cropping 된 얼굴 이미지를 가져왔으므로 기본 이미지 크기를 곧바로 box 테두리(크기)로 설정해주었다. 만약 이미지 원형을 사용할 경우  
-`boxes = face_recognition.face_locations(rgb,model="detection_method")
+```python
+boxes = face_recognition.face_locations(rgb,model="detection_method")
 ``` 
-코드의 주석을 해제해주어야 한다.
+위 코드의 주석을 해제해주어야 한다.
 
-위 코드를 실행시키면 79장의 각각의 이미지에 대해서 아래의 3가지 정보가 담긴 ictionary를 얻을 수 있다.
+위 코드를 실행시키면 79장의 각각의 이미지에 대해서 아래의 3가지 정보가 담긴 dictionary를 얻을 수 있다.
 
 1. 입력 이미지의 경로
 2. 이미지의 얼굴 위치(즉, 경계 상자)
@@ -228,5 +231,5 @@ plt.show()
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDk1MjExMDIxXX0=
+eyJoaXN0b3J5IjpbNzI1NTAxOTY5LDQ5NTIxMTAyMV19
 -->
