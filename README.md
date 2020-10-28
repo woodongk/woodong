@@ -1,5 +1,5 @@
 # woodong's blog
-[Netlify Status](https://app.netlify.com/sites/woodong/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/cfaedd66-22ca-4c31-8799-4b9f7372dafd/deploy-status)](https://app.netlify.com/sites/woodong/deploys)
 
 @[안영진](https://github.com/snoop2head)님 코드를 참고하였음
 
@@ -29,3 +29,6 @@ npm start
 ### **주의사항**
 - ./content/blog/development/images/hello.png 와 ./content/blog/development//hello.md 파일 지우면 안 됨!지울 경우 블로그 새로 생성해야함 😱 원인 불명의 에러..
 
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMTczNzc1MzM0MF19
+-->
