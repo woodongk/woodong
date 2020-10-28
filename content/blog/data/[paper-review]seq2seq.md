@@ -79,11 +79,13 @@ draft: false
 ![](20200925-seq2seq/comparison_baseline.PNG)
 
 ---
-대규모 번역 태스크에서 phrase-based SMT을 순수하게 뛰어넘은 것은 이번이 처음
+
+**본 논문의 의의는, 대규모 번역 taskd에서 딥러닝 모델로는 처음으로 phrase-based SMT을 순수하게 뛰어넘은 논문이라는 것!**
+
 ---
 
 피드백 환영합니다. 
 감사합니다.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUwNjYwOTE4NF19
+eyJoaXN0b3J5IjpbNzU4NzE4ODQ2LC01MDY2MDkxODRdfQ==
 -->
