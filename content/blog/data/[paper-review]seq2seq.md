@@ -18,22 +18,23 @@ draft: false
 
 #### 기존 연구들의 문제점과 해결
 * **Problem 1. input과 output의 길이가 다를 경우**
-	* SOLVE -> 하나의 RNN을 사용하여 input sequence를 고정 길이의 벡터로 변환시키고 다른 RNN을 사용해서 벡터를 target sequence로 변환
+	* SOLVE ⮕ 하나의 RNN을 사용하여 input sequence를 고정 길이의 벡터로 변환시키고 다른 RNN을 사용해서 벡터를 target sequence로 변환
 * **Problem 2. long term dependencies**
-	* SOLVE -> RNN은 long term dependency (길이가 길어지면 제대로 동작하지 않는 문제) 가 있었다.  Long Short-Term Memory (LSTM)을 사용하여 이를 해결!
+	* SOLVE ⮕ RNN은 long term dependency (길이가 길어지면 제대로 동작하지 않는 문제) 가 있었다.  Long Short-Term Memory (LSTM)을 사용하여 이를 해결!
 
 #### LSTM 학습과정
 * LSTM의 목적은 조건부 확률 p(y1, . . . , yT'|x1, . . . , xT )이다. 
 	* 이때 (x1, . . . , xT) 는 Input sequence, y1, . . . , yT′는 그에 대응되는 output sequence이다. 그리고 T'와 T의 길이는 다를 수 있다.
-	1. 먼저 Encoder LSTM의 마지막 hidden state를 이용하여  input sequence (x1 , . . . , xT ) 을 받아 고정 길이 벡터인 v를 만든다.
-	2. 그리고 일반적인 LSTM-LM 공식을 이용하여 y1 , . . . , yT'에 대한 확률을 계산한다. 이때 그 LSTM의 초기 hidden state는 x1 , . . . , xT에 대한 벡터 표현인 v이다.
-	3. 각각의 p(yt|v, y1, . . . , yt−1) 는 vocabulary내의 모든 단어를 표현한 것이다.
-*** 여기서 중요한 점!**: 각 문장이 `문장의 끝을 나타내는 특별한 기호` 로 표현되어야 한다. (<end>, <Eos> 등) 이 기호들을 통해 모델에서 가능한 모든 길이의 sequence에 대한 분포를 정의할 수 있다. (문장의 끝을 알 수 있다는 말)
+		1. 먼저 Encoder LSTM의 마지막 hidden state를 이용하여  input sequence (x1 , . . . , xT ) 을 받아 고정 길이 벡터인 v를 만든다.
+		2. 그리고 일반적인 LSTM-LM 공식을 이용하여 y1 , . . . , yT'에 대한 확률을 계산한다. 이때 그 LSTM의 초기 hidden state는 x1 , . . . , xT에 대한 벡터 표현인 v이다.
+		3. 각각의 p(yt|v, y1, . . . , yt−1) 는 vocabulary내의 모든 단어를 표현한 것이다.
+
+** 여기서 중요한 점!**: 각 문장이 "문장의 끝을 나타내는 특별한 기호" 로 표현되어야 한다. (`<end>`, `<Eos>` 등) 이 기호들을 통해 모델에서 가능한 모든 길이의 sequence에 대한 분포를 정의할 수 있다. (문장의 끝을 알 수 있다는 말)
 
 #### 3가지 주요 변화
-* 먼저, **저자들은 두 개의 다른 LSTM을 사용했다**:  하나는 input sequence encoding 용, 하나는 output sequence decoding 용. 이렇게 하면 모델의 파라미터 수가 적게 증가하며 동시에 여러 언어 쌍에서 LSTM을 학습하는 것이 그렇게 하면 대수 모델 매개변수가 무시할 수 있는 계산 비용으로 증가하며 동시에 여러 언어 쌍에서 LSTM을 교육하는 것이 편해진다. 
-* 두번째로, **저자들은 깊은 (다층의) LSTM 들이 얕은 LSTM보다 현저하게 성능을 증가시키는 것을 발견했다.**. 따라서 4개 layer의 LSTM을 사용했다. (4개.. 깊은건가?)
-* 셋째로, **input sentnece의 어순을 뒤집으면 성능이 매우 향상한다** 예를 들어, 문장 a, b, c과 문장 α, β, γ를 대응시키는 대신 문장 c, b, a과 문장 α, β, γ 를 적용시키면 성능이 향상된다. 정확한 원인은 모르나 input의 a와 target의 α, input의 b와 target의 β처럼 input output간의 소통 거리가 상대적으로 가까워지기 때문이라고 추정된다.
+* 먼저, **`저자들은 두 개의 다른 LSTM을 사용했다`**:  하나는 input sequence encoding 용, 하나는 output sequence decoding 용. 이렇게 하면 모델의 파라미터 수가 적게 증가하며 동시에 여러 언어 쌍에서 LSTM을 학습하는 것이 그렇게 하면 대수 모델 매개변수가 무시할 수 있는 계산 비용으로 증가하며 동시에 여러 언어 쌍에서 LSTM을 교육하는 것이 편해진다. 
+* 두번째로, **`저자들은 깊은 (다층의) LSTM 들이 얕은 LSTM보다 현저하게 성능을 증가시키는 것을 발견했다.`**. 따라서 4개 layer의 LSTM을 사용했다. (4개.. 깊은건가?)
+* 셋째로, **`input sentnece의 어순을 뒤집으면 성능이 매우 향상한다`** 예를 들어, 문장 a, b, c과 문장 α, β, γ를 대응시키는 대신 문장 c, b, a과 문장 α, β, γ 를 적용시키면 성능이 향상된다. 정확한 원인은 모르나 input의 a와 target의 α, input의 b와 target의 β처럼 input output간의 소통 거리가 상대적으로 가까워지기 때문이라고 추정된다.
 
 ### Experiments
 #### Dataset
@@ -83,3 +84,6 @@ draft: false
 
 피드백 환영합니다. 
 감사합니다.
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTUwNjYwOTE4NF19
+-->
