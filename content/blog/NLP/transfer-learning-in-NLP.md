@@ -20,6 +20,10 @@ draft: false
 > 다운스트림 태스크란, 사전 훈련된 모델이나 컴포넌트를 활용하는 지도 학습 태스크들을 부르는 명칭이다. 주로 NLP 분야에서 쓰이는 용어임 (출처 : [The Illustrated BERT, ELMo, and co. (How NLP Cracked Transfer Learning) – Jay Alammar – Visualizing machine learning one concept at a time.](http://jalammar.github.io/illustrated-bert/))
 
 
+![](20201227-transfer-learning/TwoStep.png)
+1) 사전 학습 단계 (BERT 모델 학습 단계 2) 사전 학습 모델을 통한 파인 튜닝 단계
+
+
 ### BERT
 이때 대부분의 자연어 처리 과제에서는 사전 학습 모델로, 마스크 언어 모델(Masked Langauge Model, MLM)과 다음 문장 예측(Next Sentence Prediction, NSP)을 서브 태스크로 학습한 `BERT`를 사용하고 있다. 더 풀어서 말하자면, BERT 모델은 단어 중 일부를 마스크 토큰으로 랜덤으로 변화시킨 뒤에 해당 마스크 토큰을 예측하는 MLM 태스크와 두 문장을 이어 붙여 이것이 원래 말뭉치에서 이어져 있던 문장인지 맞추는 NSP 태스크를 수행하는데, 이 두 가지 서브 태스크만으로 BERT 모델은 여러 태스크에 대해서 파인 튜닝할 때 효과적으로 작용하게 된다. 
 
