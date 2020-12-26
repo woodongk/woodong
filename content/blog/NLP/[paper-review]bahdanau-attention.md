@@ -1,7 +1,7 @@
 ---
 title: "[Paper Review] Bahdanau Attention (2014)"
 date: 2020-10-7 23:35:01
-category: data
+category: NLP
 draft: false
 ---
 

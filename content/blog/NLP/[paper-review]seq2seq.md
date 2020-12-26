@@ -1,7 +1,7 @@
 ---
 title: "[Paper Review] Seq2Seq (2014)"
 date: 2020-09-27 23:09:01
-category: data
+category: NLP
 draft: false
 ---
 
