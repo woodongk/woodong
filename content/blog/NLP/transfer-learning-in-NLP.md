@@ -33,11 +33,11 @@ draft: false
 
 버트 파인 튜닝의 과정은 다음과 같다. 먼저 사전 훈련된 BERT 모델에 문장을 제공하고, BERT를 통해 문장 임베딩 벡터 값을 추출한다. 추출된 벡터 값을 완전 연결 계층과 소프트맥스 함수에 적용해 논쟁과 비논쟁 댓글의 확률 벡터를 반환한다. 정말 이게 전부다! 🤨 더 심도 있는 튜닝이 가능하겠지만, 본인은 아직 새내기 단계라서 이 정도 간단한 튜닝만 진행하였다.
 
-[20201227-transfer-learning/BERT_architecture.png]
+![](20201227-transfer-learning/BERT_architecture.png)
 > 출처: 이기창님 저서 한국어 임베딩을 참고하여 그렸습니다
 
 
-[20201227-transfer-learning/model_result.png]
+![](20201227-transfer-learning/model_result.png)
 
 결과는 위와 같다. 사실 이진 분류를 고려한다면 좋은 결과는 아니지만, BERT 파인 튜닝 모델을 사용했을 때가 논쟁과 비논쟁을 골고루 예측하는 좋은 성과를 보여줬다.
 
