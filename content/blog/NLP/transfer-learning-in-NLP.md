@@ -44,7 +44,7 @@ draft: false
 ### BERT
 이때 대부분의 자연어 처리 과제에서는 사전 학습 모델로, 마스크 언어 모델(Masked Langauge Model, MLM)과 다음 문장 예측(Next Sentence Prediction, NSP)을 서브 태스크로 학습한 `BERT`를 사용하고 있다. 더 풀어서 말하자면, BERT 모델은 단어 중 일부를 마스크 토큰으로 랜덤으로 변화시킨 뒤에 해당 마스크 토큰을 예측하는 MLM 태스크와 두 문장을 이어 붙여 이것이 원래 말뭉치에서 이어져 있던 문장인지 맞추는 NSP 태스크를 수행하는데, 이 두 가지 서브 태스크만으로 BERT 모델은 여러 태스크에 대해서 파인 튜닝할 때 효과적으로 작용하게 된다. 
 
-처음에는 컴퓨터 비전 쪽 전이 학습과 개념이 충돌해서 굉장히 헷갈렸는데, 컴퓨터 비전의 전이 학습은 라벨링 된 데이터(`source data`)와 태스크(`source task`), 그리고 현재 새롭게 적용하고자 하는 새로운 데이터셋(`target data`)고ㅘ 태스크(`target task`) 4가지를 동시에 고려해야 하기 때문에  완전히 다른 성격의 데이터이거나 태스크일 경우 학습 전략이 다르다. 한편, BERT의 경우 특정한 target task가 없기 때문에 source data만 고려하면 된다. 나의 경우에도 한국어 댓글 데이터로 학습된 BERT 모델에 논쟁과 비논쟁의 이진 분류 태스크를 추가하여 간단히 학습을 마무리  하였다.
+처음에는 컴퓨터 비전 쪽 전이 학습과 개념이 충돌해서 굉장히 헷갈렸는데, 컴퓨터 비전의 전이 학습은 라벨링 된 데이터(`source data`)와 태스크(`source task`), 그리고 현재 새롭게 적용하고자 하는 새로운 데이터셋(`target data`)과 태스크(`target task`) 4가지를 동시에 고려해야 하기 때문에  완전히 다른 성격의 데이터이거나 태스크일 경우 학습 전략이 다르다. 한편, BERT의 경우 특정한 target task가 없기 때문에 source data만 고려하면 된다. 나의 경우에도 한국어 댓글 데이터로 학습된 BERT 모델에 논쟁과 비논쟁의 이진 분류 태스크를 추가하여 간단히 학습을 마무리  하였다.
 
 이처럼 BERT는 파인 튜닝에 효과적으로 개발된 모델이라, 다른 도메인에서도 사전 학습된 BERT 모델을 파인 튜닝하고 사용하고 있다. 예를 들어 금융 분야의 [FinBERT](https://arxiv.org/abs/1908.10063), 과학 분야의 [SciBERT](https://arxiv.org/abs/1903.10676), 특허 분야의 [PatentBERT](https://arxiv.org/abs/1906.02124) 등등.. 모든 분야 다 나올 기세로 나오고 있다.
 
@@ -84,6 +84,6 @@ draft: false
 [Transfer Learning in Natural Language Processing - NAACL-HLT 2019](https://docs.google.com/presentation/d/1fIhGikFPnb7G5kr58OvYC3GN4io7MznnM0aAgadvJfc/edit#slide=id.g56add7608c_0_6)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE5NjY3OTU1MCw3Nzc1Mjk4NDQsMTEzND
-gwMTk3OV19
+eyJoaXN0b3J5IjpbLTExNjE5MDYyMiwxMTk2Njc5NTUwLDc3Nz
+UyOTg0NCwxMTM0ODAxOTc5XX0=
 -->
