@@ -19,7 +19,7 @@ draft: false
 
 
 이에 보다 객관적인 공감률 지수를 산출하기 위해 전체 공감과 비공감의 개수를 함께 고려하는 이항 분포의 신뢰구간 추정 방식을 사용하였으며, 그 중에서도 극단치에 민감하지 않아 Reddit, Yelp 등의 플랫폼에서 사용되고 있는 윌슨의 방식을 선정하였다.  
-
+![](20201227-transfer-learning/wilson_.png)
 
 
 ### 정의
@@ -79,5 +79,5 @@ draft: false
 [Transfer Learning in Natural Language Processing - NAACL-HLT 2019](https://docs.google.com/presentation/d/1fIhGikFPnb7G5kr58OvYC3GN4io7MznnM0aAgadvJfc/edit#slide=id.g56add7608c_0_6)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUzODI3MDc5OCwxMTM0ODAxOTc5XX0=
+eyJoaXN0b3J5IjpbLTEyMDMxNzg2MjYsMTEzNDgwMTk3OV19
 -->
