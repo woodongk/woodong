@@ -18,7 +18,7 @@ draft: false
 
 ⮕ 잘못된 예시. 좋아요 1개 만으로 100% 공감이라 간주되어 상위 순위에 등재되어 있다. (from [how-not-to-sort-by-average-rating](https://www.evanmiller.org/how-not-to-sort-by-average-rating.html))
 
-이에 보다 객관적인 공감률 지수를 산출하기 위해 전체 공감과 비공감의 개수를 함께 고려하는 이항 분포의 신뢰구간 추정 방식을 사용하였으며, 그 중에서도 극단치에 민감하지 않아 Reddit, Yelp 등의 플랫폼에서 사용되고 있는 윌슨의 방식을 선정하였다.  아래 표는 윌슨의 공식을 적용시킨 댓글 샘플의 예시이다.
+이에 보다 객관적인 공감률 지수를 산출하기 위해 전체 공감과 비공감의 개수를 함께 고려하는 이항 분포의 신뢰구간 추정 방식을 사용하였으며, 그 중에서도 극단치에 민감하지 않아 Reddit, Yelp 등의 플랫폼에서 사용되고 있는 윌슨의 방식을 선정하였다. 아래 표는 윌슨의 공식을 적용시킨 댓글 샘플의 예시이다.
 ![](20201227-transfer-learning/wilson_example.png)
 이 연구에서는 표의 결과를 바탕으로 다음과 같이 논쟁/비논쟁 댓글을 정의하였다.
 
@@ -84,6 +84,6 @@ draft: false
 [Transfer Learning in Natural Language Processing - NAACL-HLT 2019](https://docs.google.com/presentation/d/1fIhGikFPnb7G5kr58OvYC3GN4io7MznnM0aAgadvJfc/edit#slide=id.g56add7608c_0_6)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODAzMjUzMTU0LDc3NzUyOTg0NCwxMTM0OD
-AxOTc5XX0=
+eyJoaXN0b3J5IjpbMTE5NjY3OTU1MCw3Nzc1Mjk4NDQsMTEzND
+gwMTk3OV19
 -->
