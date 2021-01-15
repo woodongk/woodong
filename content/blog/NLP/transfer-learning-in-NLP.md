@@ -5,10 +5,15 @@ category: NLP
 draft: false
 ---
 
-## Transfer Learning
+## KcBERT를 활용한 Transfer Learning 학습 일지
 
 이번 석사 졸업 논문에 댓글을 논쟁적인 측면에서 분석하는 모델을 싣고자 했는데, 태스크가 새로운 것이다 보니 충분한 양의 데이터를 확보하기도 힘들었고, 기존 모델로는 괜찮은 성능이 나오지 않았다. 😭 이것저것 방법을 찾아보던 중 한국어 댓글 데이터로 학습된 버트 모델이 최근에 공개된 것을 확인하여 연구 마무리에 활용하였다. 
 
+### 문제 정의: 논쟁 댓글?
+
+여기서 논쟁 댓
+
+본 연구에서는 댓글에 대한 공감과 비공감의 비율이 유사하게 나타나는 댓글을 논 쟁 댓글, 반대로 공감과 비공감이 극적으로 차이를 보이는 댓글을 비논쟁 댓글이라 정의하였다. 그러나 단순히 공감률만을 고려할 경우, 이용자의 반응이 충분하게 대립 되지 않음에도 논쟁 댓글로 탐지될 가능성이 존재한다. 예를 들면, 댓글 A의 공감이 5, 비공감이 5 일 경우 논쟁의 정도가 약함에도 불구하고 공감이 50 비공감이 50으로 비교적 논쟁의 정도가 높은 댓글 B와 동일하게 분류될 수 있다.
 
 ### 정의
 이전에 내가 처한 상황처럼, 태스크가 새로워서 충분한 양의 데이터가 없고, 그만큼의 데이터를 학습할 리소스도 부족하고, 데드라인도 얼마 남지 않았을 때(..!) 사용할 수 있는 방법이 바로 `전이 학습` , `Transfer Learning`이다.  
@@ -63,3 +68,6 @@ draft: false
 [publicservant_AI/03_케라스로_버트_빠르게_돌려보기_With_네이버_영화_감성분석_TUTORIAL.ipynb at master · kimwoonggon/publicservant_AI · GitHub](https://github.com/kimwoonggon/publicservant_AI/blob/master/03_%EC%BC%80%EB%9D%BC%EC%8A%A4%EB%A1%9C_%EB%B2%84%ED%8A%B8_%EB%B9%A0%EB%A5%B4%EA%B2%8C_%EB%8F%8C%EB%A0%A4%EB%B3%B4%EA%B8%B0_With_%EB%84%A4%EC%9D%B4%EB%B2%84_%EC%98%81%ED%99%94_%EA%B0%90%EC%84%B1%EB%B6%84%EC%84%9D_TUTORIAL.ipynb)
 [Transfer Learning in Natural Language Processing - NAACL-HLT 2019](https://docs.google.com/presentation/d/1fIhGikFPnb7G5kr58OvYC3GN4io7MznnM0aAgadvJfc/edit#slide=id.g56add7608c_0_6)
 
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTE0NjAyNzAwMjJdfQ==
+-->
