@@ -13,8 +13,6 @@ draft: false
 
 이 연구에서 **댓글의 논쟁성**이란, 댓글에 대한 공감과 비공감 수치가 유사하게 나타나는 댓글을 논쟁 가능성이 높은 `논쟁 댓글`, 반대로 공감과 비공감 수치가 극적으로 차이가 보이는 댓글을 `비논쟁 댓글`이라 정의내렸다. 즉, 공감률( 공감 / (공감+비공감) )이 0.5에 근사하는 댓글을 논쟁 댓글이라고 정의내리고자 하였다. 
 
-논쟁을 
-
 이때 공감과 비공감 수치가 유사한 정도를 공감율이 0.5에 근사하는 
 
 그러나 단순히 공감률만을 고려할 경우, 이용자의 반응이 충분하게 대립 되지 않음에도 논쟁 댓글로 탐지될 가능성이 존재한다. 예를 들면, 댓글 A의 공감이 5, 비공감이 5 일 경우 논쟁의 정도가 약함에도 불구하고 공감이 50 비공감이 50으로 비교적 논쟁의 정도가 높은 댓글 B와 동일하게 분류될 수 있다.
@@ -73,5 +71,5 @@ draft: false
 [Transfer Learning in Natural Language Processing - NAACL-HLT 2019](https://docs.google.com/presentation/d/1fIhGikFPnb7G5kr58OvYC3GN4io7MznnM0aAgadvJfc/edit#slide=id.g56add7608c_0_6)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAzNDQ0MDAwMF19
+eyJoaXN0b3J5IjpbMTEzNDgwMTk3OV19
 -->
