@@ -18,9 +18,9 @@ draft: false
 ⮕ 잘못된 예시. 좋아요 1개 만으로 100% 공감이라 간주되어 상위 순위에 등재되어 있다. (from [how-not-to-sort-by-average-rating](https://www.evanmiller.org/how-not-to-sort-by-average-rating.html))
 
 
-이에 보다 객관적인 공감률 지수를 산출하기 위해 전체 공감과 비공감의 개수를 함께 고려하는 이항 분포의 신뢰구간 추정 방식을 사용하였으며, 그 중에서도 극단치에 민감하지 않아 Reddit, Yelp 등의 플랫폼에서 사용되고 있는 사용되는 윌슨의 방식을 선정하였다. 
+이에 보다 객관적인 공감률 지수를 산출하기 위해 전체 공감과 비공감의 개수를 함께 고려하는 이항 분포의 신뢰구간 추정 방식을 사용하였으며, 그 중에서도 극단치에 민감하지 않아 Reddit, Yelp 등의 플랫폼에서 사용되고 있는 윌슨의 방식을 선정하였다.  
 
-따라서 보다 객관적인 공감률 지수를 산출하기 위해 전체 공감과 비공감의 개 수를 함께 고려하는 이항 분포의 신뢰구간 추정 방식을 사용하였으며, 그중에서도 극단치에 민감하지 않은 윌슨의 방식(Wilson, 1927)을 선정하였다. 이 방식은 레딧 (Reddit)3과 옐프(Yelp)4 등의 여러 플랫폼에서 순위 정렬 방식에 이용되고 있는 보장된 방식이다. 이에 윌슨의 신뢰구간 수식을 사용해 댓글의 공감률 지수를 계산 하였으며(식 7.1), 수식에서 사용된 pˆ은 공감률(공감/(공감+비공감)), n은 공감과 비공감의 총합이다.
+
 
 ### 정의
 이전에 내가 처한 상황처럼, 태스크가 새로워서 충분한 양의 데이터가 없고, 그만큼의 데이터를 학습할 리소스도 부족하고, 데드라인도 얼마 남지 않았을 때(..!) 사용할 수 있는 방법이 바로 `전이 학습` , `Transfer Learning`이다.  
@@ -79,5 +79,5 @@ draft: false
 [Transfer Learning in Natural Language Processing - NAACL-HLT 2019](https://docs.google.com/presentation/d/1fIhGikFPnb7G5kr58OvYC3GN4io7MznnM0aAgadvJfc/edit#slide=id.g56add7608c_0_6)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg0OTA1Mjc5LDExMzQ4MDE5NzldfQ==
+eyJoaXN0b3J5IjpbMTUzODI3MDc5OCwxMTM0ODAxOTc5XX0=
 -->
