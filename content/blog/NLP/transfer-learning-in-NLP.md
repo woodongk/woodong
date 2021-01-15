@@ -15,6 +15,7 @@ draft: false
 그러나 단순히 공감률만을 고려할 경우, 이용자의 반응이 충분하게 대립 되지 않음에도 논쟁 댓글로 탐지될 가능성이 존재한다. 예를 들면 댓글 A의 공감이 5, 비공감이 5 일 경우 논쟁의 정도가 약함에도 불구하고 공감률이 0.5 이기에, 공감이 50 비공감이 50으로 비교적 논쟁의 정도가 높은 다른 댓글과 동일하게 분류될 수 있다. 이는 좋아요와 싫어요 수치로 순위를 매기는 다양한 웹사이트에서도 빈번하게 야기되는 문제이다. 
 
 ![](https://www.evanmiller.org/images/average-rating/amazon.png)
+
 ⮕ 잘못된 예시. 좋아요 1개 만으로 100% 공감이라 간주되어 상위 순위에 등재되어 있다. (from [how-not-to-sort-by-average-rating](https://www.evanmiller.org/how-not-to-sort-by-average-rating.html))
 
 이에 보다 객관적인 공감률 지수를 산출하기 위해 전체 공감과 비공감의 개수를 함께 고려하는 이항 분포의 신뢰구간 추정 방식을 사용하였으며, 그 중에서도 극단치에 민감하지 않아 Reddit, Yelp 등의 플랫폼에서 사용되고 있는 윌슨의 방식을 선정하였다.  아래 표는 윌슨의 공식을 적용시킨 댓글 샘플의 예시이다.
@@ -83,5 +84,6 @@ draft: false
 [Transfer Learning in Natural Language Processing - NAACL-HLT 2019](https://docs.google.com/presentation/d/1fIhGikFPnb7G5kr58OvYC3GN4io7MznnM0aAgadvJfc/edit#slide=id.g56add7608c_0_6)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzc3NTI5ODQ0LDExMzQ4MDE5NzldfQ==
+eyJoaXN0b3J5IjpbODAzMjUzMTU0LDc3NzUyOTg0NCwxMTM0OD
+AxOTc5XX0=
 -->
