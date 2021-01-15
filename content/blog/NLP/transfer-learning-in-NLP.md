@@ -24,10 +24,10 @@ draft: false
 - 논쟁 댓글: 윌슨 신뢰구간 하한 기준 0.4 에서 0.6
 - 비논쟁 댓글: 윌슨 신뢰구간 하한 기준 0.1 이하와 0.9 이상
 
-이렇게 정의내린 논쟁 댓글과 비논쟁 댓글을 분류하는 모델을 만들자! 
+이렇게 정의내린 논쟁 댓글과 비논쟁 댓글을 분류하는 모델을 구축하려 하였는데, 베이스 모델로 로지스틱 모델을 돌렸으나 그 성능이 처참하였다. 심지어 데이터도 고작 3만개 정도로 터무니 없이 부족한 상황 
 
 ### Transfer Learning의 정의
-이전에 내가 처한 상황처럼, 태스크가 새로워서 충분한 양의 데이터가 없고, 그만큼의 데이터를 학습할 리소스도 부족하고, 데드라인도 얼마 남지 않았을 때(..!) 사용할 수 있는 방법이 바로 `전이 학습` , `Transfer Learning`이다.  
+지금 내가 처한 상황처럼, 태스크가 새로워서 충분한 양의 데이터가 없고, 그만큼의 데이터를 학습할 리소스도 부족하고, 데드라인도 얼마 남지 않았을 때(..!) 사용할 수 있는 방법이 바로 `전이 학습` , `Transfer Learning`이다.  
 
 이처럼 전이 학습은 딥러닝 분야에서는 굉장히 적다고 여겨지는 데이터 개수만으로도(태스크에 따라 다르지만, 1000개도 가능하다) 특정한 태스크를 수행할 수 있게 한다. 이는 과거 딥러닝 모델이 많은 라벨링 된 데이터를 필요로 하고 방대한 리소스를 잡아먹는 와중에 혁신적으로 등장한 개념이다. [앤드류 응 선생님](https://www.youtube.com/watch?v=wjqaz6m42wU&feature=youtu.be)이 2016년 NIPS 발표에서 Transfer Learning 개념을 소개한 것이 가장 유명하다.
 
@@ -83,5 +83,5 @@ draft: false
 [Transfer Learning in Natural Language Processing - NAACL-HLT 2019](https://docs.google.com/presentation/d/1fIhGikFPnb7G5kr58OvYC3GN4io7MznnM0aAgadvJfc/edit#slide=id.g56add7608c_0_6)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjU1MzkwMDkxLDExMzQ4MDE5NzldfQ==
+eyJoaXN0b3J5IjpbNzc3NTI5ODQ0LDExMzQ4MDE5NzldfQ==
 -->
