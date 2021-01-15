@@ -14,6 +14,8 @@ draft: false
 
 그러나 단순히 공감률만을 고려할 경우, 이용자의 반응이 충분하게 대립 되지 않음에도 논쟁 댓글로 탐지될 가능성이 존재한다. 예를 들면 댓글 A의 공감이 5, 비공감이 5 일 경우 논쟁의 정도가 약함에도 불구하고 공감률이 0.5 이기에, 공감이 50 비공감이 50으로 비교적 논쟁의 정도가 높은 댓글 B와 동일하게 분류될 수 있다. 이는 좋아요와 싫어요 수치로 순위를 매기는 다양한 웹사이트에서도 빈번하게 야기되는 문제이다. 
 
+![](https://www.evanmiller.org/images/average-rating/amazon.png)
+==> 잘못된 예시. 좋아요 1개 만으로 100% ㄱ
 따라서 보다 객관적인 공감률 지수를 산출하기 위해 전체 공감과 비공감의 개수를 함께 고려하는 이항 분포의 신뢰구간 추정 방식을 사용하였으며, 그 중에서도 극단치에 민감하지 않은 윌슨의 방식을 선정하였다. 
 
 따라서 보다 객관적인 공감률 지수를 산출하기 위해 전체 공감과 비공감의 개 수를 함께 고려하는 이항 분포의 신뢰구간 추정 방식을 사용하였으며, 그중에서도 극단치에 민감하지 않은 윌슨의 방식(Wilson, 1927)을 선정하였다. 이 방식은 레딧 (Reddit)3과 옐프(Yelp)4 등의 여러 플랫폼에서 순위 정렬 방식에 이용되고 있는 보장된 방식이다. 이에 윌슨의 신뢰구간 수식을 사용해 댓글의 공감률 지수를 계산 하였으며(식 7.1), 수식에서 사용된 pˆ은 공감률(공감/(공감+비공감)), n은 공감과 비공감의 총합이다.
@@ -59,6 +61,9 @@ draft: false
 내용 피드백에 도움 주신 원익 님께도 감사드립니다.
 
 ## Reference
+- http://wordpress.mrreid.org/2014/05/20/ranking-ratings/
+- https://www.evanmiller.org/how-not-to-sort-by-average-rating.html
+
 ### 개념 참고
 [Transfer learning & fine-tuning](https://keras.io/guides/transfer_learning/)
 [Transfer Learning - ratsgo's NLPBOOK](https://ratsgo.github.io/nlpbook/docs/introduction/transfer/)
@@ -72,5 +77,5 @@ draft: false
 [Transfer Learning in Natural Language Processing - NAACL-HLT 2019](https://docs.google.com/presentation/d/1fIhGikFPnb7G5kr58OvYC3GN4io7MznnM0aAgadvJfc/edit#slide=id.g56add7608c_0_6)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NDM3OTA3NTIsMTEzNDgwMTk3OV19
+eyJoaXN0b3J5IjpbMTY3NDMzMjc0MiwxMTM0ODAxOTc5XX0=
 -->
