@@ -14,10 +14,15 @@ Course 1. Neural Networks and Deep Learning
 
 딥러닝을 알기 위해서는 먼저 `Logistic Regression` 을 알아야 한다. `Logistic Regression` 은 어떤 x (features) Y를 예측하는데 사용되는 기본 선형 확률 모델이다. 강의에 나왔던 예시로 예를 들자면 **어떤 사진**이 주어졌을 때 **사진이 고양이인지, 강아지인지 판단하는 작업**을 의미한다. 고양이인지, 강아지인지에 대한 분류 정확도를 로지스틱 회귀 모델은 0에서 1 사이의 확률로 표현해준다. 
 
-![logistic regression 이미지 검색결과](https://miro.medium.com/max/2400/1*RqXFpiNGwdiKBWyLJc_E7g.png)
-이를 수식으로 간단히 정리하자면 예측값인 $\hat{y}$은 다음
+이를 수식으로 간단히 정리하자면 예측값인 $\hat{y}$은 다음과 같다.
 $$\hat{y} = \sigma(W^Tx + b)$$
 
+여기서 중요한 붑
+
+![logistic regression 이미지 검색결과](https://miro.medium.com/max/2400/1*RqXFpiNGwdiKBWyLJc_E7g.png)
+
+
+즉, 로지스틱 회귀 모델은 0 ~ 1 사이의 확률값으로 어떤 예측에 대한 수치를 표현하는 것이 핵심이며 그렇기에 Sigmoid 함수를 	
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjcwMTkzMzYsLTEzNzM1ODAyNV19
+eyJoaXN0b3J5IjpbMTczODg0MjAxOSwtMTM3MzU4MDI1XX0=
 -->
