@@ -5,13 +5,30 @@ category: NLP
 draft: false
 ---
 
-## Transfer Learning
+## KcBERT를 활용한 Transfer Learning 학습 일지
 
-이번 석사 졸업 논문에 댓글을 논쟁적인 측면에서 분석하는 모델을 싣고자 했는데, 태스크가 새로운 것이다 보니 충분한 양의 데이터를 확보하기도 힘들었고, 기존 모델로는 괜찮은 성능이 나오지 않았다. 😭 이것저것 방법을 찾아보던 중 한국어 댓글 데이터로 학습된 버트 모델이 최근에 공개된 것을 확인하여 연구 마무리에 활용하였다. 
+이번 석사 졸업 논문에 댓글을 논쟁적인 측면에서 분석하는 모델을 싣고자 했는데, 태스크가 새로운 것이다 보니 충분한 양의 데이터를 확보하기도 힘들었고, 기존 모델로는 괜찮은 성능이 나오지 않았다. 😭 이것저것 방법을 찾아보던 중 한국어 댓글 데이터로 학습된 BERT 모델이 최근에 공개된 것을 확인하여 연구 마무리에 활용하였다. 
 
+### 문제 정의: 논쟁 댓글
+이 연구에서 **댓글의 논쟁성**이란, 댓글에 대한 공감과 비공감 수치가 유사하게 나타나는 댓글을 논쟁 가능성이 높은 `논쟁 댓글`, 반대로 공감과 비공감 수치가 극적으로 차이가 보이는 댓글을 `비논쟁 댓글`이라 정의내렸다. 다시 말해 논쟁 댓글이란, 공감률( 공감 / (공감+비공감) )이 0.5에 근사하는 댓글. 많은 연구에서 댓글의 논쟁성을 다양하게 정의하고 있으며, 여기서는 `댓글의 수치적 특성에서 드러나는 논쟁 정도`에 주목하였다.
 
-### 정의
-이전에 내가 처한 상황처럼, 태스크가 새로워서 충분한 양의 데이터가 없고, 그만큼의 데이터를 학습할 리소스도 부족하고, 데드라인도 얼마 남지 않았을 때(..!) 사용할 수 있는 방법이 바로 `전이 학습` , `Transfer Learning`이다.  
+그러나 단순히 공감률만을 고려할 경우, 이용자의 반응이 충분하게 대립 되지 않음에도 논쟁 댓글로 탐지될 가능성이 존재한다. 예를 들면 댓글 A의 공감이 5, 비공감이 5 일 경우 논쟁의 정도가 약함에도 불구하고 공감률이 0.5 이기에, 공감이 50 비공감이 50으로 비교적 논쟁의 정도가 높은 다른 댓글과 동일하게 분류될 수 있다. 이는 좋아요와 싫어요 수치로 순위를 매기는 다양한 웹사이트에서도 빈번하게 야기되는 문제이다. 
+
+![](https://www.evanmiller.org/images/average-rating/amazon.png)
+
+⮕ 잘못된 예시. 좋아요 1개 만으로 100% 공감이라 간주되어 상위 순위에 등재되어 있다. (from [how-not-to-sort-by-average-rating](https://www.evanmiller.org/how-not-to-sort-by-average-rating.html))
+
+이에 보다 객관적인 공감률 지수를 산출하기 위해 전체 공감과 비공감의 개수를 함께 고려하는 이항 분포의 신뢰구간 추정 방식을 사용하였으며, 그 중에서도 극단치에 민감하지 않아 Reddit, Yelp 등의 플랫폼에서 사용되고 있는 윌슨의 방식을 선정하였다. 아래 표는 윌슨의 공식을 적용시킨 댓글 샘플의 예시이다.
+![](20201227-transfer-learning/wilson_example.png)
+이 연구에서는 표의 결과를 바탕으로 다음과 같이 논쟁/비논쟁 댓글을 정의하였다.
+
+- 논쟁 댓글: 윌슨 신뢰구간 하한 기준 0.4 에서 0.6
+- 비논쟁 댓글: 윌슨 신뢰구간 하한 기준 0.1 이하와 0.9 이상
+
+이렇게 정의내린 논쟁 댓글과 비논쟁 댓글을 분류하는 모델을 구축하려 하였는데, 베이스 모델로 로지스틱 모델을 돌렸으나 그 성능이 처참하였다. 심지어 데이터도 고작 3만개 정도로 터무니 없이 부족한 상황 
+
+### Transfer Learning의 정의
+지금 내가 처한 상황처럼, 태스크가 새로워서 충분한 양의 데이터가 없고, 그만큼의 데이터를 학습할 리소스도 부족하고, 데드라인도 얼마 남지 않았을 때(..!) 사용할 수 있는 방법이 바로 `전이 학습` , `Transfer Learning`이다.  
 
 이처럼 전이 학습은 딥러닝 분야에서는 굉장히 적다고 여겨지는 데이터 개수만으로도(태스크에 따라 다르지만, 1000개도 가능하다) 특정한 태스크를 수행할 수 있게 한다. 이는 과거 딥러닝 모델이 많은 라벨링 된 데이터를 필요로 하고 방대한 리소스를 잡아먹는 와중에 혁신적으로 등장한 개념이다. [앤드류 응 선생님](https://www.youtube.com/watch?v=wjqaz6m42wU&feature=youtu.be)이 2016년 NIPS 발표에서 Transfer Learning 개념을 소개한 것이 가장 유명하다.
 
@@ -27,7 +44,7 @@ draft: false
 ### BERT
 이때 대부분의 자연어 처리 과제에서는 사전 학습 모델로, 마스크 언어 모델(Masked Langauge Model, MLM)과 다음 문장 예측(Next Sentence Prediction, NSP)을 서브 태스크로 학습한 `BERT`를 사용하고 있다. 더 풀어서 말하자면, BERT 모델은 단어 중 일부를 마스크 토큰으로 랜덤으로 변화시킨 뒤에 해당 마스크 토큰을 예측하는 MLM 태스크와 두 문장을 이어 붙여 이것이 원래 말뭉치에서 이어져 있던 문장인지 맞추는 NSP 태스크를 수행하는데, 이 두 가지 서브 태스크만으로 BERT 모델은 여러 태스크에 대해서 파인 튜닝할 때 효과적으로 작용하게 된다. 
 
-처음에는 컴퓨터 비전 쪽 전이 학습과 개념이 충돌해서 굉장히 헷갈렸는데, 컴퓨터 비전의 전이 학습은 라벨링 된 데이터(`source data`)와 태스크(`source task`), 그리고 현재 새롭게 적용하고자 하는 새로운 데이터셋(`target data`)고ㅘ 태스크(`target task`) 4가지를 동시에 고려해야 하기 때문에  완전히 다른 성격의 데이터이거나 태스크일 경우 학습 전략이 다르다. 한편, BERT의 경우 특정한 target task가 없기 때문에 source data만 고려하면 된다. 나의 경우에도 한국어 댓글 데이터로 학습된 BERT 모델에 논쟁과 비논쟁의 이진 분류 태스크를 추가하여 간단히 학습을 마무리  하였다.
+처음에는 컴퓨터 비전 쪽 전이 학습과 개념이 충돌해서 굉장히 헷갈렸는데, 컴퓨터 비전의 전이 학습은 라벨링 된 데이터(`source data`)와 태스크(`source task`), 그리고 현재 새롭게 적용하고자 하는 새로운 데이터셋(`target data`)과 태스크(`target task`) 4가지를 동시에 고려해야 하기 때문에  완전히 다른 성격의 데이터이거나 태스크일 경우 학습 전략이 다르다. 한편, BERT의 경우 특정한 target task가 없기 때문에 source data만 고려하면 된다. 나의 경우에도 한국어 댓글 데이터로 학습된 BERT 모델에 논쟁과 비논쟁의 이진 분류 태스크를 추가하여 간단히 학습을 마무리  하였다.
 
 이처럼 BERT는 파인 튜닝에 효과적으로 개발된 모델이라, 다른 도메인에서도 사전 학습된 BERT 모델을 파인 튜닝하고 사용하고 있다. 예를 들어 금융 분야의 [FinBERT](https://arxiv.org/abs/1908.10063), 과학 분야의 [SciBERT](https://arxiv.org/abs/1903.10676), 특허 분야의 [PatentBERT](https://arxiv.org/abs/1906.02124) 등등.. 모든 분야 다 나올 기세로 나오고 있다.
 
@@ -51,6 +68,9 @@ draft: false
 내용 피드백에 도움 주신 원익 님께도 감사드립니다.
 
 ## Reference
+- http://wordpress.mrreid.org/2014/05/20/ranking-ratings/
+- https://www.evanmiller.org/how-not-to-sort-by-average-rating.html
+
 ### 개념 참고
 [Transfer learning & fine-tuning](https://keras.io/guides/transfer_learning/)
 [Transfer Learning - ratsgo's NLPBOOK](https://ratsgo.github.io/nlpbook/docs/introduction/transfer/)
@@ -63,3 +83,7 @@ draft: false
 [publicservant_AI/03_케라스로_버트_빠르게_돌려보기_With_네이버_영화_감성분석_TUTORIAL.ipynb at master · kimwoonggon/publicservant_AI · GitHub](https://github.com/kimwoonggon/publicservant_AI/blob/master/03_%EC%BC%80%EB%9D%BC%EC%8A%A4%EB%A1%9C_%EB%B2%84%ED%8A%B8_%EB%B9%A0%EB%A5%B4%EA%B2%8C_%EB%8F%8C%EB%A0%A4%EB%B3%B4%EA%B8%B0_With_%EB%84%A4%EC%9D%B4%EB%B2%84_%EC%98%81%ED%99%94_%EA%B0%90%EC%84%B1%EB%B6%84%EC%84%9D_TUTORIAL.ipynb)
 [Transfer Learning in Natural Language Processing - NAACL-HLT 2019](https://docs.google.com/presentation/d/1fIhGikFPnb7G5kr58OvYC3GN4io7MznnM0aAgadvJfc/edit#slide=id.g56add7608c_0_6)
 
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTExNjE5MDYyMiwxMTk2Njc5NTUwLDc3Nz
+UyOTg0NCwxMTM0ODAxOTc5XX0=
+-->
