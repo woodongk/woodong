@@ -10,7 +10,7 @@ draft: false
 
 코스는 총 5개로 구성되어 있으며, 수료하면서 요약했던 내용을 개인적인 복습 차원에서 요약 및 정리를 하려고 한다. 역전파 등 수식 과정은 이 강의 내용에서나 유튜브에서나 훨씬 더 잘 설명되어 있다고 판단되어, 이론 위주로 내용을 정리해보았다. 물론 필연적으로 수식이 등장하겠지만 깔끔하게 보여지기 위해 강의 노트를 옮겨왔다. 기본적인 annotation은 안다고 가정하였다.
 
-Course 1. Neural Networks and Deep Learning
+### Course 1. Neural Networks and Deep Learning
 
 딥러닝을 알기 위해서는 먼저 `Logistic Regression` 을 알아야 한다. `Logistic Regression` 은 어떤 x (features) Y를 예측하는데 사용되는 기본 선형 확률 모델이다. 강의에 나왔던 예시로 예를 들자면 **어떤 사진**이 주어졌을 때 **사진이 고양이인지, 강아지인지 판단하는 작업**을 의미한다. 고양이인지, 강아지인지에 대한 분류 정확도를 로지스틱 회귀 모델은 0에서 1 사이의 확률로 표현해준다. 
 
@@ -28,5 +28,6 @@ $$\hat{y} = \sigma(W^Tx + b)$$
 
 여기서 로지스틱 회귀 모델로부터 나온 예측값을 $y$가 아닌 $\hat{y}$으로 표현했다. 이유는 이 수치는 어디까지나 **정답**이 아닌 **예측값**이기 때문이다. 분류 모델의 정확도를 평가 하기 위해 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTA4NzU4MDQyLC0xMzczNTgwMjVdfQ==
+eyJoaXN0b3J5IjpbMTEwNjcyMjUxOSw5MDg3NTgwNDIsLTEzNz
+M1ODAyNV19
 -->
