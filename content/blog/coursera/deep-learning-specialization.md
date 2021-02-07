@@ -17,12 +17,12 @@ Course 1. Neural Networks and Deep Learning
 이를 수식으로 간단히 정리하자면 예측값인 $\hat{y}$은 다음과 같다.
 $$\hat{y} = \sigma(W^Tx + b)$$
 
-여기서 중요한 붑
+여기서 중요한 부분은 `Sigmoid`함수 부분인데, 아래 그림은 `Sigmoid`함수를 나타낸다. 어떠한 x를 받아도 0 ~ 1 사이의 값으로 변환해주는 것을 볼 수 있다.
 
 ![logistic regression 이미지 검색결과](https://miro.medium.com/max/2400/1*RqXFpiNGwdiKBWyLJc_E7g.png)
 
 
-즉, 로지스틱 회귀 모델은 0 ~ 1 사이의 확률값으로 어떤 예측에 대한 수치를 표현하는 것이 핵심이며 그렇기에 Sigmoid 함수를 	
+**즉, 로지스틱 회귀 모델은 0 ~ 1 사이의 확률값으로 어떤 예측에 대한 수치를 표현하는 것이 핵심이다.** 그리
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTczODg0MjAxOSwtMTM3MzU4MDI1XX0=
+eyJoaXN0b3J5IjpbMjA3MzQ0MTkxNiwtMTM3MzU4MDI1XX0=
 -->
