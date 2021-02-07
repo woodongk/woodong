@@ -12,10 +12,10 @@ draft: false
 
 Course 1. Neural Networks and Deep Learning
 
-딥러닝을 알기 위해서는 먼저 `Logistic Regression` 을 알아야 한다. `Logistic Regression` 은 어떤 x (features) Y를 예측하는데 사용되는 기본 선형 확률 모델이다. 강의에 나왔던 예시로 예를 들자면 **어떤 사진**이 주어졌을 때 사진이 고양이인지, 강아지인지 판단하는 작업을 의미한다. 로지스틱 회귀 모델에서 y 값은 
+딥러닝을 알기 위해서는 먼저 `Logistic Regression` 을 알아야 한다. `Logistic Regression` 은 어떤 x (features) Y를 예측하는데 사용되는 기본 선형 확률 모델이다. 강의에 나왔던 예시로 예를 들자면 **어떤 사진**이 주어졌을 때 사진이 고양이인지, 강아지인지 판단하는 작업을 의미한다. 로지스틱 회귀 모델에서 y 값은 0에서 1 사이의 확률 
 
 ![logistic regression 이미지 검색결과](https://miro.medium.com/max/2400/1*RqXFpiNGwdiKBWyLJc_E7g.png)
 Given x, y
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYwMTgxMjEyMV19
+eyJoaXN0b3J5IjpbLTEzNzM1ODAyNV19
 -->
