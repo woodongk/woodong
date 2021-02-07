@@ -16,8 +16,8 @@ Course 1. Neural Networks and Deep Learning
 
 ![logistic regression 이미지 검색결과](https://miro.medium.com/max/2400/1*RqXFpiNGwdiKBWyLJc_E7g.png)
 이를 수식으로 간단히 정리하자면 
-Given x, y
-$$Given x, \hat{y} = p$$
+ $\hat{y} = P(y=1|x)$
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIwOTc2Nzc3MCwtMTM3MzU4MDI1XX0=
+eyJoaXN0b3J5IjpbLTEzOTcyMTM3OTMsLTEzNzM1ODAyNV19
 -->
