@@ -17,14 +17,7 @@ Course 1. Neural Networks and Deep Learning
 ![logistic regression 이미지 검색결과](https://miro.medium.com/max/2400/1*RqXFpiNGwdiKBWyLJc_E7g.png)
 이를 수식으로 간단히 정리하자면 
 Given x, y
-
-```
-$$given x, $$  
-$$otherwise : 0$$  
-$$P(w)=U(x/2)(7/5)/Z$$  
-$$p_{\theta}(x) = \int p_{\theta}(2z)p_{\theta}(y\mid k)dz$$  
-$$x = argmax_k((x_t-x_u+x_v)^T*x_m)/(||x_b-x_k+x_l||)$$  
-```
+$$Given x, \hat{y} = p$$
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNjMzMjM3NTEsLTEzNzM1ODAyNV19
+eyJoaXN0b3J5IjpbMTIwOTc2Nzc3MCwtMTM3MzU4MDI1XX0=
 -->
