@@ -68,7 +68,10 @@ $$w := w - \alpha \frac{dJ(w)}{dw}$$
 
 ![Image for post](https://miro.medium.com/max/3196/1*pHjovxWB8BvI71ZkS-o_3A.png)
 
-- 거의 대부분 sigmoid 보다 성능이 좋다. 정확한 이유는 알 수 없지만 출력값이 -1에서 1 사이의 값으로 나오면서 평균값이 0에
+- 거의 대부분 sigmoid 보다 성능이 좋다. 
+- 정확한 이유는 알 수 없지만 출력값이 -1에서 1 사이의 값으로 나오면서 평균값이 0에 가깝게 해주기 때문. **데이터가 중심에 오기 때문에 성능을 향상시켜 준다고 한다.**
+
+sigmoid와 tanh의 치명적인 한계는, z 값이 매우 크거나 작을 때 gradient (기울기)가 0에 가깝게 된다는 점이다. 이는 gradient descent의 수렴 속도를 매우 느리게 하기 때문에 잘 사용되지 않는다.
 
 
 ![Image for post](https://miro.medium.com/max/3228/1*LiBZo_FcnKWqoU7M3GRKbA.png)
@@ -77,6 +80,6 @@ $$w := w - \alpha \frac{dJ(w)}{dw}$$
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjQ5MjkzMjgzLC0xNTQ4NDMyODQ1LC0yMD
+eyJoaXN0b3J5IjpbNjgzNjgxOTQwLC0xNTQ4NDMyODQ1LC0yMD
 I3MjIyNjE3XX0=
 -->
