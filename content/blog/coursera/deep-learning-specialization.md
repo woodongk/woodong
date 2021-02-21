@@ -97,7 +97,7 @@ layer 수가 적으면 y를 잘 예측하기 위해 많은 노드가 필요한�
 
 ---
 
-Course 1에서는 딥러닝을 배우기 이전에 기초가 되는 `Logistic Regression`을 다루었고, 여러 기본 용어와 개념을 배웠다. Course 2에서는 보다 정교하게 모델을 구현하기 위한 여러 실용적인 테크닉을 배운다. 
+Course 1에서는 딥러닝을 배우기 이전에 기초가 되는 `Logistic Regression`을 다루었고, 여러 기본 용어와 개념을 배웠다. Course 2에서는 보다 정교하게 모델을 구현하기 위한 여러 실용적인 테크닉을 배운다. 이후 파트 역시 추후 정리 예정! 
 
 
 
@@ -105,7 +105,7 @@ Course 1에서는 딥러닝을 배우기 이전에 기초가 되는 `Logistic Re
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAyOTg1ODIxNSwtNjc1MTk3ODQwLDM4Nj
-czNjA0Myw5ODQyNzAzNjEsLTE1NDg0MzI4NDUsLTIwMjcyMjI2
-MTddfQ==
+eyJoaXN0b3J5IjpbLTIwMzA4MzM1NjUsLTY3NTE5Nzg0MCwzOD
+Y3MzYwNDMsOTg0MjcwMzYxLC0xNTQ4NDMyODQ1LC0yMDI3MjIy
+NjE3XX0=
 -->
