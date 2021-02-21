@@ -52,10 +52,10 @@ $$w := w - \alpha \frac{dJ(w)}{dw}$$
 
 ---
 ## Neural Network
-로지스틱 호
+로지스틱 회귀 모델에 여러 층을 추가하여 확장한 것이 바로 신경망 모델이다. 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDQ1MzA5MzYyLC0yOTM0NjY1NDcsLTQ3OT
-U1NTcwNCwtMjAyNTAzNzIwOCwxMTA2NzIyNTE5LDkwODc1ODA0
-MiwtMTM3MzU4MDI1XX0=
+eyJoaXN0b3J5IjpbMTkwODkwMjU0OCwtMjkzNDY2NTQ3LC00Nz
+k1NTU3MDQsLTIwMjUwMzcyMDgsMTEwNjcyMjUxOSw5MDg3NTgw
+NDIsLTEzNzM1ODAyNV19
 -->
