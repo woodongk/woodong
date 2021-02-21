@@ -44,10 +44,15 @@ $$L(\hat{y}, y) = -(ylog\hat{y} + (1-y)log(1-\hat{y}))$$
 ![gradient descent 이미지 검색결과](http://media5.datahacker.rs/2018/06/word-image-30.jpeg)
 (b는 고려하지 않고 w만 고려함) 위 그림에서 w가 목표로 해야할 값은 global optimum이다. 만약 기울기가 음수라면, global optimum이 가장 기울기 경사가 급격한 오른쪽에 있을 것이라고 가정한다. 그러므로 다음 w = w + 양수. 만약 기울기가 양수라면, global optimum은 기울기 경사가 급격한 방향인 왼쪽에 있을 것이라고 가정하고 w = w - 양수. 이러한 w를 업데이트 과정을 식으로 표현한다면 다음과 같다. 
 $$w := w - \alpha \frac{dJ(w)}{dw}$$
-- $\alpha$ : 학습율. w가 얼마나 이동할 지에 대한 하이퍼파라미터
-- 
+- $\alpha$ : 학습율. w가 다음에 얼마나 옆으로 갈 지에 대한 하이퍼파라미터
+- $\frac{dJ(w)}{dw}$ :  w의 변화율 (기울기)
+
+즉, 이후로는 비용함수를 갱신하고 계속해서 위 식을 반복함으로써 w를 새롭게 업데이트 해나가면서  학습이 진행한다. 
+ㅇ
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MTY5ODQ2NjYsLTQ3OTU1NTcwNCwtMj
-AyNTAzNzIwOCwxMTA2NzIyNTE5LDkwODc1ODA0MiwtMTM3MzU4
-MDI1XX0=
+eyJoaXN0b3J5IjpbMTg5OTU1OTg3MSwtNDc5NTU1NzA0LC0yMD
+I1MDM3MjA4LDExMDY3MjI1MTksOTA4NzU4MDQyLC0xMzczNTgw
+MjVdfQ==
 -->
