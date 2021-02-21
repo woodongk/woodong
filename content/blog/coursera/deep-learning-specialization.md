@@ -91,11 +91,12 @@ sigmoid와 tanh의 치명적인 한계는, z 값이 매우 크거나 작을 때 
 2. Exponentially computational large when shallow
 hidden layer 수가 적으면 y를 잘 예측하기 위해 많은 노드가 필요한데, 이건 오히려 layer가 적을 때보다 계산량이 많다.
 
-종합하자면 
+---
+정리하자면 Course 1에서는 딥러닝을 배우기 이전에 기초가 되는 로지스틱 회귀 모델을 다루었고, 여러 기본 용어와 개념을 배웠다. Course 2에서는 보다 정교하게 모델을 구현하기 위한 더 세부적인 용어와 개념을 다룬다 
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NTEzNTg4OTcsLTE1NDg0MzI4NDUsLT
-IwMjcyMjI2MTddfQ==
+eyJoaXN0b3J5IjpbOTg0MjcwMzYxLC0xNTQ4NDMyODQ1LC0yMD
+I3MjIyNjE3XX0=
 -->
