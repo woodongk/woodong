@@ -57,6 +57,7 @@ $$w := w - \alpha \frac{dJ(w)}{dw}$$
 ![](imgs/1.png)
 
 
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQyMjU2MDddfQ==
+eyJoaXN0b3J5IjpbLTIwMjcyMjI2MTddfQ==
 -->
