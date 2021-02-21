@@ -79,12 +79,15 @@ sigmoid와 tanh의 치명적인 한계는, z 값이 매우 크거나 작을 때 
 - **앤드류응 선생님 추천**
 - 1. 음수 일 때 0이 되는 것은 단점일 수 있으나, 실제로는 작동 잘한다.
 - 2. 빠르다! (함수가 단순해서) 
-- 3. 0으로 가면 학습 속도 저하의 가능성이 있지만, 일반적으로 z는 양수이기 때문에 빠른 편
+- 3. 0으로 가면 학습 속도 저하의 가능성이 있지만, 일반적으로 z는 양수이기 때문에 빠른 편. 거의 항상 작동이 잘 된다고 한다.
 
 **ReLU의 변형태인 Leaky ReLU가 이후 등장하였지만, 딱히 좋은 성능 차이를 내진 않는다고 함**
 
 
+
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODg4ODI1OTQ5LC0xNTQ4NDMyODQ1LC0yMD
-I3MjIyNjE3XX0=
+eyJoaXN0b3J5IjpbMTE5MzA3NDQ1NSwtMTU0ODQzMjg0NSwtMj
+AyNzIyMjYxN119
 -->
