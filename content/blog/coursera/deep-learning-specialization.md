@@ -32,7 +32,8 @@ $$L(\hat{y}, y) = \frac{1}{2}(\hat{y} - y)^2$$
 
 $$L(\hat{y}, y) = -(ylog\hat{y} + (1-y)log(1-\hat{y}))$$
 
-직관적으로 위 식은 y가 1일 때 
+직관적으로 위 식은 만약 y 
+만약 y가 1인 경우, ŷ을 최대한 크게하고, Y가 0인 경우 ŷ을 작게하는 것입니다
 
 
 여기서 두가지 유사한 개념이 나온다. 
@@ -40,7 +41,7 @@ $$L(\hat{y}, y) = -(ylog\hat{y} + (1-y)log(1-\hat{y}))$$
 
 여기서 두가지 개념이 나오는데, Loss function과 cost function 두 개념이 나온다. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MjYyMzI4MzEsLTQ3OTU1NTcwNCwtMj
-AyNTAzNzIwOCwxMTA2NzIyNTE5LDkwODc1ODA0MiwtMTM3MzU4
-MDI1XX0=
+eyJoaXN0b3J5IjpbLTcxMzcxODIzMCwtNDc5NTU1NzA0LC0yMD
+I1MDM3MjA4LDExMDY3MjI1MTksOTA4NzU4MDQyLC0xMzczNTgw
+MjVdfQ==
 -->
