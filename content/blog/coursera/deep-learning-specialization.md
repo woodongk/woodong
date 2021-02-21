@@ -44,7 +44,7 @@ Loss function과 유사한 용어로 Cost function도 존재한다. 개념적으
 
 ![과](http://media5.datahacker.rs/2018/06/word-image-30.jpeg)
 (*b는 고려하지 않고 w만 고려함*) 
-**목적: 비용 함수 J를 최소화하는 어떤 파라미터 w와 b를 찾는 것**> 
+**<목적: 비용 함수 J를 최소화하는 어떤 파라미터 w와 b를 찾는 것**> 
 위 그림은 비용 함수 J를 간략히 표현한 이차원 그래프이다. 모델은 비용 함수를 최소로 만드는 값인 `global optimum` 에 도달하기 위해 함수의 기울기에 따라 w를 업데이트 해나간다. 만약 기울기가 음수라면, `global optimum`이 (가장 기울기 경사가 급격한) 오른쪽에 있을 것이라고 가정한다. 그러므로 [w = w + 양수]로 업데이트. 만약 기울기가 양수라면, `global optimum`이 (기울기 경사가 급격한) 방향인 왼쪽에 있을 것이라고 가정하고 [w = w - 양수]로 업데이트. w 업데이트 과정을 식으로 표현한다면 다음과 같다. 
 $$w := w - \alpha \frac{dJ(w)}{dw}$$
 - $\alpha$ : 학습율. w가 다음에 얼마나 이동할 지에 대한 수치값 
@@ -55,11 +55,11 @@ $$w := w - \alpha \frac{dJ(w)}{dw}$$
 
 ---
 ## Neural Network
-로지스틱 회귀 모델에 여러 층을 추가하여 확장한 것이 바로 신경망 모델이다. 코세라 실습 강의 자료로 비교하자면 다음과 같다. 
+`Logistic Regression`에 여러 `hidden Layer`를 추가하여 확장한 것이 바로 신경망 모델이다. 코세라 실습 강의 자료로 비교하자면 다음과 같다. 
 
 ![](imgs/1.png)
 
-이처럼 로지스틱 회귀에 하나 레이어가 추가되기만 해도 신경망 모델이라 불린다. 위와 같은 형태의 신경망 모델은 input layer, hidden layer, output layer 총 3가지 레이어가 있는 단순한 형태로, 2-layer 신경망 모델이라 불리운다. **일반적으로 신경망 모델에서 input layer는 수로 안 센다고 한다** 
+위와 같은 형태의 신경망 모델은 `input layer`, `hidden layer`, `output layer` 총 3가지 레이어가 있는 단순한 형태로, 2-layer 신경망 모델이라 불리운다. *일반적으로 신경망 모델에서 input layer는 수로 안 셈*
 
 ### Activation functions
 모든 학습과 역전파 과정은 로지스틱 회귀 때와 유사하나, 한 층 쌓였다고 파라미터 수가 상당히 복잡해져서 이차 난관이 온다. 일단 새로운 하이퍼파라미터도 추가되는데, 단순히 sigmoid 함수를 사용했던 로지스틱 회귀 모델과 달리 신경망 모델에서는 층마다 activation function(활성 함수)를 달리 설정해주곤 한다. 간단히 활성 함수의 종류와 활용도를 언급하고 마친다.
@@ -100,7 +100,7 @@ hidden layer 수가 적으면 y를 잘 예측하기 위해 많은 노드가 필�
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NDA2MDkzNzEsLTY3NTE5Nzg0MCwzOD
+eyJoaXN0b3J5IjpbLTEwOTgzNjAzMTAsLTY3NTE5Nzg0MCwzOD
 Y3MzYwNDMsOTg0MjcwMzYxLC0xNTQ4NDMyODQ1LC0yMDI3MjIy
 NjE3XX0=
 -->
