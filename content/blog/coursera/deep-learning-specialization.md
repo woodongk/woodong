@@ -72,19 +72,19 @@ $$w := w - \alpha \frac{dJ(w)}{dw}$$
 ![Image for post](https://miro.medium.com/max/3196/1*pHjovxWB8BvI71ZkS-o_3A.png)
 
 - 거의 대부분 `sigmoid` 보다 성능이 좋다. 
-- 정확한 이유는 알 수 없지만 출력값이 -1에서 1 사이의 값으로 나오면서 평균값이 0에 가깝게 해주기 때문이라 추정. **평균값이 0이면 데이터가 중심에 오기 때문에 일반적을 성능이 향상된다고 한다**
+- 정확한 이유는 알 수 없지만 출력값이 -1에서 1 사이의 값으로 나오면서 평균값이 0에 가깝게 해주기 때문이라 추정. **일반적으로 평균값이 0이면 데이터가 중심에 오기 때문에 예측 성능이 향상된다고 한다**
 
-sigmoid와 tanh의 치명적인 한계는, z 값이 매우 크거나 작을 때 gradient (기울기)가 0에 가깝게 된다는 점이다. 이는 gradient descent의 수렴 속도를 매우 느리게 하기 때문에 잘 사용되지 않는다.
+한편, `sigmoid`와 `tanh`의 치명적인 한계는, z 값이 매우 크거나 작을 때 `gradient descent`가 0에 가깝게 된다는 점이다. 이는 `gradient descent`의 수렴 속도를 매우 느리게 하기 때문에 역시 딥러닝에서는 잘 사용되지 않는다.
 
 
 ![Image for post](https://miro.medium.com/max/3228/1*LiBZo_FcnKWqoU7M3GRKbA.png)
 
 - **앤드류응 선생님 추천**
-- 1. 음수 일 때 0이 되는 것은 단점일 수 있으나, 실제로는 작동 잘한다.
-- 2. 빠르다! (함수가 단순해서) 
-- 3. 0으로 가면 학습 속도 저하의 가능성이 있지만, 일반적으로 z는 양수이기 때문에 빠른 편. 거의 항상 작동이 잘 된다고 한다.
+1. 음수 일 때 0이 되는 것은 단점일 수 있으나, 실제로는 작동 잘한다.
+2. 빠르다! (함수가 단순해서) 
+3. 0으로 가면 학습 속도 저하의 가능성이 있지만, 일반적으로 z는 양수이기 때문에 빠른 편. 
 
-**ReLU의 변형태인 Leaky ReLU가 이후 등장하였지만, 딱히 좋은 성능 차이를 내진 않는다고 함**
+*ReLU의 변형태인 Leaky ReLU가 이후 등장하였지만, 딱히 좋은 성능 차이를 내진 않는다고 함. 거의 대부분 작동이 잘 된다고 한다.* 
 
 ---
 그렇다면 왜 딥러닝이 효과적인가?
@@ -100,7 +100,7 @@ hidden layer 수가 적으면 y를 잘 예측하기 위해 많은 노드가 필�
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NzYwMTgyMjQsLTY3NTE5Nzg0MCwzOD
-Y3MzYwNDMsOTg0MjcwMzYxLC0xNTQ4NDMyODQ1LC0yMDI3MjIy
-NjE3XX0=
+eyJoaXN0b3J5IjpbMjAyMDUyNDkxMiwtNjc1MTk3ODQwLDM4Nj
+czNjA0Myw5ODQyNzAzNjEsLTE1NDg0MzI4NDUsLTIwMjcyMjI2
+MTddfQ==
 -->
