@@ -59,10 +59,10 @@ $$w := w - \alpha \frac{dJ(w)}{dw}$$
 
 ![](imgs/1.png)
 
-위와 같은 형태의 신경망 모델은 `input layer`, `hidden layer`, `output layer` 총 3가지 레이어가 있는 단순한 형태로, 2-layer 신경망 모델이라 불리운다. *일반적으로 신경망 모델에서 input layer는 수로 안 셈*
+위와 같은 형태의 신경망 모델은 `input layer`, `hidden layer`, `output layer` 총 3가지 레이어가 있는 단순한 형태로, 2-layer 신경망 모델이라 불리운다. *일반적으로 신경망 모델에서 input layer는 수로 안 셈*. 
 
 ### Activation functions
-모든 학습과 역전파 과정은 로지스틱 회귀 때와 유사하나, 한 층 쌓였다고 파라미터 수가 상당히 복잡해져서 이차 난관이 온다. 일단 새로운 하이퍼파라미터도 추가되는데, 단순히 sigmoid 함수를 사용했던 로지스틱 회귀 모델과 달리 신경망 모델에서는 층마다 activation function(활성 함수)를 달리 설정해주곤 한다. 간단히 활성 함수의 종류와 활용도를 언급하고 마친다.
+모든 학습과 역전파 과정은 `Logistic Regression` 때와 유사하나, 한 층 쌓였다고 파라미터 수가 상당히 복잡해져서 이차 난관이 온다. 일단 새로운 하이퍼파라미터도 추가되는데, 단순히 sigmoid 함수를 사용했던 로지스틱 회귀 모델과 달리 신경망 모델에서는 층마다 activation function(활성 함수)를 달리 설정해주곤 한다. 간단히 활성 함수의 종류와 활용도를 언급하고 마친다.
 
 #### Sigmoid
 ![Image for post](https://miro.medium.com/max/3268/1*a04iKNbchayCAJ7-0QlesA.png)
@@ -100,7 +100,7 @@ hidden layer 수가 적으면 y를 잘 예측하기 위해 많은 노드가 필�
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwOTgzNjAzMTAsLTY3NTE5Nzg0MCwzOD
-Y3MzYwNDMsOTg0MjcwMzYxLC0xNTQ4NDMyODQ1LC0yMDI3MjIy
-NjE3XX0=
+eyJoaXN0b3J5IjpbMTIyOTEwMDg2MCwtNjc1MTk3ODQwLDM4Nj
+czNjA0Myw5ODQyNzAzNjEsLTE1NDg0MzI4NDUsLTIwMjcyMjI2
+MTddfQ==
 -->
