@@ -90,8 +90,7 @@ $$w := w - \alpha \frac{dJ(w)}{dw}$$
 ### 딥러닝 모델은 왜 효과적인가?
 그밖에 강의에서 나온 구체적인 수식은 생략하고, 왜 딥러닝 모델이 효과적인 가에 대해서 한번 정리하고 마무리하겠다.
 
-1. Deep Neural Network 는 feature들을 representation한 뒤ㅜ, 취합한 것. 그러므로 더 많은 layer가 있을 수록 더 많은 representation이 가능하다. 
-일반적으로 low-level의 layer에서는 음소, 모서리 등의 비교적 간단한 정보를 다루고 중기와 후기 layer로 갈수록 점점 정보를 취합해나간다고 한다. 
+1. Deep Neural Network 는 feature들을 representation한 뒤 취합한 것. 그러므로 더 많은 layer가 있을 수록 더 많은 representation이 가능하다. 일반적으로 low-level의 층에서는 음소, 모서리 등의 비교적 간단한 정보를 배우고 중기와 후기 layer로 갈수록 점점 정보를 취합하여 복잡한 정보를 배울 수 있게 된다. (모서리 .. 코 .. 얼굴)
 
 2. Exponentially computational large when shallow
 hidden layer 수가 적으면 y를 잘 예측하기 위해 많은 노드가 필요한데, 이건 오히려 layer가 적을 때보다 계산량이 많다.
@@ -101,43 +100,6 @@ hidden layer 수가 적으면 y를 잘 예측하기 위해 많은 노드가 필�
 
 
 
-눈, 코, 귀, 또는 턱 이렇게 말이죠. 그 이후로, 다른 얼굴들의
-
-유형을 인식하거나 감지할 수 있게 됩니다.
-
-직관적으로, 이런 초기의 층을
-
-간단한 모서리와 같은 함수를 감지하는 것이라고 생각할 수 있습니다.
-
-그리고나서, 다음 단계의 신경 층에서 이런 내용을 취합할 수 있습니다.
-
-그렇게해서 더욱 복잡한 함수를 배울 수 있는것이죠.
-
-컨볼루션얼 신경망에 대한 내용을 나중에 다룰 때 이런 시각화 내용을 더 빨리 이해하실 수 있을것입니다.
-
-시각화의 기술적인 내용중 하나는,
-
-이러한 모서리 감지 기능이 이미지의 조금한 부분을 볼텐데요,
-
-이런 아주 조금한 이미지 범위 말이죠.
-
-그리고나서, 얼굴 인식기능은 조금 더 큰 이미지 부분을 볼 수 있겠습니다.
-
-이 부분에서 기억하실 것은 일단 먼저 이미지에서 간단한 것들을 찾은 뒤에,
-
-모서리와 같은 것 말이죠, 그 다음에 취합하는 것입니다.
-
-이러한 부분들을 합쳐서 조금 더 복잡한 것들을 감지할 수 있습니다. 눈과 코같은 부위 말이죠.
-
-그리고 이런 부위를 또 합쳐서 더욱 복잡한 내용도 감지할 수 있는 것입니다.
-
-이러한 복잡한 계층적인 representation이
-
-또는 compositional representation이
-
-이미지 또는 얼굴 인식 분야외에도 다른 분야의 데이터에도 적용됩니다.
-
-예를 들어, 여러분이 음성 인식 시스템을 만드는 경우에,
 
 음성을 시각화하기는 쉽지 않지만,
 
@@ -358,7 +320,7 @@ PR brading 을 감안하지 않더라도, 딥네트워크는 작 작동합니다
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NzYyNzc0NzYsLTY3NTE5Nzg0MCwzOD
-Y3MzYwNDMsOTg0MjcwMzYxLC0xNTQ4NDMyODQ1LC0yMDI3MjIy
-NjE3XX0=
+eyJoaXN0b3J5IjpbMTQ5NTY1NDY0OCwtNjc1MTk3ODQwLDM4Nj
+czNjA0Myw5ODQyNzAzNjEsLTE1NDg0MzI4NDUsLTIwMjcyMjI2
+MTddfQ==
 -->
