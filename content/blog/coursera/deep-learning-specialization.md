@@ -27,7 +27,7 @@ $$\hat{y} = \sigma(W^Tx + b)$$
 
 ---
 ### 비용 함수
-`Logistic Regression` 으로부터 나온 예측값을 $y$가 아닌 $\hat{y}$으로 표현했다. 이 예측값을 원래의 정답과 비교하면서 모델을 개선한다. 만약 모델이 초기에 고양이 사진을 강아지로 예측했다면, 고양이로 예측하도록 모델의 파라미터를 수정해야 한다. 다시 말해 정답과 예측값의 차이를 줄여나가는 것이 학습의 목적이며, 정답과 예측값의 차이를 수식으로 나타낸 것이 비용 함수이다. 비용 함수는 Loss function, Cost function 등으로 표현되며 풀어야 하는 문제에 따라서 식이 다르다. 
+`Logistic Regression` 모델을 훈련시키기 위해서는 먼저 **Loss function**를 정의해야 한다. 이전에 `Logistic Regression` 으로부터 나온 예측값을 $y$가 아닌 $\hat{y}$으로 표현했다. 이 예측값을 원래의 정답과 비교하면서 모델을 개선한다. 만약 모델이 초기에 고양이 사진을 강아지로 예측했다면, 고양이로 예측하도록 모델의 파라미터를 수정해야 한다. 다시 말해 정답과 예측값의 차이를 줄여나가는 것이 학습의 목적이며, 정답과 예측값의 차이를 수식으로 나타낸 것이 비용 함수이다. 비용 함수는 Loss function, Cost function 등으로 표현되며 풀어야 하는 문제에 따라서 식이 다르다. 
 
 `Logistic Regression`에서는 이진 분류를 다루기에 단순히 아래처럼 예측값과 정답 간 차이의 제곱을 Loss function으로 설정할 수도 있다. 
 $$L(\hat{y}, y) = \frac{1}{2}(\hat{y} - y)^2$$
@@ -101,6 +101,6 @@ hidden layer 수가 적으면 y를 잘 예측하기 위해 많은 노드가 필�
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjU1MjEwNDEsMzg2NzM2MDQzLDk4NDI3MD
-M2MSwtMTU0ODQzMjg0NSwtMjAyNzIyMjYxN119
+eyJoaXN0b3J5IjpbLTY3NTE5Nzg0MCwzODY3MzYwNDMsOTg0Mj
+cwMzYxLC0xNTQ4NDMyODQ1LC0yMDI3MjIyNjE3XX0=
 -->
