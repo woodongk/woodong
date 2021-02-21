@@ -64,6 +64,9 @@ $$w := w - \alpha \frac{dJ(w)}{dw}$$
 #### Sigmoid
 ![Image for post](https://miro.medium.com/max/3268/1*a04iKNbchayCAJ7-0QlesA.png)
 
+- 한가지 예외 **이진 분류 문제의 출력층**일 경우를 제외하고는 딥러닝에서 거의 사용되지 않는다.  
+
+
 
 ![Image for post](https://miro.medium.com/max/3196/1*pHjovxWB8BvI71ZkS-o_3A.png)
 
@@ -74,6 +77,6 @@ $$w := w - \alpha \frac{dJ(w)}{dw}$$
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA2MDEwODI2LC0xNTQ4NDMyODQ1LC0yMD
-I3MjIyNjE3XX0=
+eyJoaXN0b3J5IjpbLTE2MjAwNDM4NjMsLTE1NDg0MzI4NDUsLT
+IwMjcyMjI2MTddfQ==
 -->
