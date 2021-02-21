@@ -26,8 +26,8 @@ $$\hat{y} = \sigma(W^Tx + b)$$
 
 ---
 
-여기서 로지스틱 회귀 모델로부터 나온 예측값을 $y$가 아닌 $\hat{y}$으로 표현했다. 이유는 이 수치는 어디까지나 **정답**이 아닌 **예측값**이기 때문이다. 분류 모델의 정확도를 평가 하기 위해 
+여기서 로지스틱 회귀 모델로부터 나온 예측값을 $y$가 아닌 $\hat{y}$으로 표현했다. 이유는 이 수치는 어디까지나 **정답**이 아닌 **예측값**이기 때문이다. 분류 모델의 정확도를 평가 하기 위해 로지스틱 회귀 모델에서는 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEwNjcyMjUxOSw5MDg3NTgwNDIsLTEzNz
-M1ODAyNV19
+eyJoaXN0b3J5IjpbLTQyNTU4NzUwMiwxMTA2NzIyNTE5LDkwOD
+c1ODA0MiwtMTM3MzU4MDI1XX0=
 -->
