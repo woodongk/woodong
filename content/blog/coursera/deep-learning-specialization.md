@@ -86,11 +86,16 @@ sigmoid와 tanh의 치명적인 한계는, z 값이 매우 크거나 작을 때 
 ---
 그렇다면 왜 딥러닝이 효과적인가?
 1. Deep Neural Network 는 feature들을 representation한 뒤ㅜ, 취합한 것. 그러므로 더 많은 layer가 있을 수록 더 많은 representation이 가능하다. 
-일반적으로 low-level의 layer에서는 음소, 모서리 등의 비교적 간단한 정보를 다루고 중기와 후기 layer로 갈수록 점점 정보를 취합해서 하나
+일반적으로 low-level의 layer에서는 음소, 모서리 등의 비교적 간단한 정보를 다루고 중기와 후기 layer로 갈수록 점점 정보를 취합해나간다고 한다. 
+
+2. Exponentially computational large when shallow
+hidden layer 수가 적으면 y를 잘 예측하기 위해 많은 노드가 필요한데, 이건 오히려 layer가 적을 때보다 계산량이 많다.
+
+종합하자면 
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQxMTYwOTMzNSwtMTU0ODQzMjg0NSwtMj
-AyNzIyMjYxN119
+eyJoaXN0b3J5IjpbLTE4NTEzNTg4OTcsLTE1NDg0MzI4NDUsLT
+IwMjcyMjI2MTddfQ==
 -->
