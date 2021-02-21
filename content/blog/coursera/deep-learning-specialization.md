@@ -45,7 +45,7 @@ Loss function과 유사한 용어로 Cost function도 존재한다. 개념적으
 
 ![과](http://media5.datahacker.rs/2018/06/word-image-30.jpeg)
 (*b는 고려하지 않고 w만 고려함*) 
-우리는 비용 함수 J를 최소화하는 어떤 파라미터 w와 b를 찾는 것이 목적이며, `global optimum`은 그 비용 함수를 최소로 만드는 값이다. 그렇기에 만약 기울기가 음수라면, global optimum이 가장 기울기 경사가 급격한 오른쪽에 있을 것이라고 가정한다. 그러므로 다음 w = w + 양수. 만약 기울기가 양수라면, global optimum은 기울기 경사가 급격한 방향인 왼쪽에 있을 것이라고 가정하고 w = w - 양수. 이러한 w를 업데이트 과정을 식으로 표현한다면 다음과 같다. 
+우리는 비용 함수 J를 최소화하는 어떤 파라미터 w와 b를 찾는 것이 목적이며, `global optimum`은 그 비용 함수를 최소로 만드는 값이다. 함수에 대한 기울기를 구하고, 기울기에 따라 w를 업데이트 해나가면서 최적의 w를 구하는 것이 목적이다. 그렇기에 만약 기울기가 음수라면, `global optimum`이 가장 기울기 경사가 급격한 오른쪽에 있을 것이라고 가정한다. 그러므로 다음 w = w + 양수. 만약 기울기가 양수라면, global optimum은 기울기 경사가 급격한 방향인 왼쪽에 있을 것이라고 가정하고 w = w - 양수. 이러한 w를 업데이트 과정을 식으로 표현한다면 다음과 같다. 
 $$w := w - \alpha \frac{dJ(w)}{dw}$$
 - $\alpha$ : 학습율. w가 다음에 얼마나 옆으로 갈 지에 대한 하이퍼파라미터
 - $\frac{dJ(w)}{dw}$ :  w의 변화율 (기울기)
@@ -100,7 +100,7 @@ hidden layer 수가 적으면 y를 잘 예측하기 위해 많은 노드가 필�
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMTg2ODM4NzUsLTY3NTE5Nzg0MCwzOD
+eyJoaXN0b3J5IjpbLTEwNjI0MjU5MzAsLTY3NTE5Nzg0MCwzOD
 Y3MzYwNDMsOTg0MjcwMzYxLC0xNTQ4NDMyODQ1LC0yMDI3MjIy
 NjE3XX0=
 -->
