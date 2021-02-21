@@ -36,11 +36,11 @@ $$L(\hat{y}, y) = -(ylog\hat{y} + (1-y)log(1-\hat{y}))$$
 
 직관적으로 위 식은 만약 $y$가 1일 경우 비용 함수를 최소화하기 위해 $\hat{y}$가 커지는 방향으로 학습을 진행하고, $y$가 0일 경우 $\hat{y}$이 작아지는 방향으로 학습이 진행되기 때문에 적절한 식이라고 볼 수 있다.
 
-Loss function과 유사한 용어로 Cost function도 있는데, Loss function과 개념적으로는 차이가 거의 없는 Cost functionㄷ. 다만 차이가 있다면 Loss function은 단일(single) training example에 대한 error 이며, Cost function은 전체 training set에 대한 error의 평균이다. 어쨌거나 말하고자 하는 것은 같기에 이후 용어는 비용 함수 $J$ 로 통일하겠다.
+Loss function과 유사한 용어로 Cost function도 존재한다. 개념적으로 차이가 거의 없지만 한 가지 차이가 있다면, Loss function은 단일(single) training example에 대한 error 이며, Cost function은 전체 training set에 대한 error의 평균이다. 둘 다 말하고자 하는 것은 궁극적으로 같기에 이후 용어는 비용 함수 $J$ 로 통일하겠다.
 
 ---
 ### Gradient Descent
-모델이 어떠한 input을 보다 더 정답에 가깝게 예측하기 위해서는 **비용 함수 J**를 최소화해야 한다. 이 비용 함수는 $y$와 $\hat{y}$로 정의되며 그렇기에 파라미터 W와 b로 구성되어 있다. 우리는 이제 비용 함수 J를 최소로 만드는 W와 b를 찾는 것이 목적이다. 이러한 파라미터 W와 b를 찾기 위해 사용되는 알고리즘이 gradient descent algorithm(경사 하강법) 이며, 어떤 함수의 최소값을 찾기 위해 사용되는 일반적인 방법이다. 함수의 기울기를 구하고, 경사의 절대값이 낮은 방향으로 이동하는 것이다. 아마 이 분야를 처음 접하면 일차 난관이 여기일 것이라 생각된다. 말은 어렵지만 사실 어렵지 않은 개념이다. 
+정리하자면 모델이 어떠한 input x를 보다 더 정답에 가깝게 예측하기 위해서는 **비용 함수 J**를 최소화해야 한다. 이 비용 함수는 $y$와 $\hat{y}$로 정의되며 그렇기에 파라미터 W와 b로 구성되어 있다. 우리는 이제 비용 함수 J를 최소로 만드는 W와 b를 찾는 것이 목적이다. 이러한 파라미터 W와 b를 찾기 위해 사용되는 알고리즘이 gradient descent algorithm(경사 하강법) 이며, 어떤 함수의 최소값을 찾기 위해 사용되는 일반적인 방법이다. 함수의 기울기를 구하고, 경사의 절대값이 낮은 방향으로 이동하는 것이다. 아마 이 분야를 처음 접하면 일차 난관이 여기일 것이라 생각된다. 말은 어렵지만 사실 어렵지 않은 개념이다. 
 
 ![과](http://media5.datahacker.rs/2018/06/word-image-30.jpeg)
 (b는 고려하지 않고 w만 고려함) 위 그림에서 w가 목표로 해야할 값은 global optimum이다. 만약 기울기가 음수라면, global optimum이 가장 기울기 경사가 급격한 오른쪽에 있을 것이라고 가정한다. 그러므로 다음 w = w + 양수. 만약 기울기가 양수라면, global optimum은 기울기 경사가 급격한 방향인 왼쪽에 있을 것이라고 가정하고 w = w - 양수. 이러한 w를 업데이트 과정을 식으로 표현한다면 다음과 같다. 
@@ -98,7 +98,7 @@ hidden layer 수가 적으면 y를 잘 예측하기 위해 많은 노드가 필�
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5ODEyMTEyMTIsLTY3NTE5Nzg0MCwzOD
+eyJoaXN0b3J5IjpbLTE2NTAwOTc4MjcsLTY3NTE5Nzg0MCwzOD
 Y3MzYwNDMsOTg0MjcwMzYxLC0xNTQ4NDMyODQ1LC0yMDI3MjIy
 NjE3XX0=
 -->
