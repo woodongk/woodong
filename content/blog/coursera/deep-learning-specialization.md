@@ -55,10 +55,3 @@ $$w := w - \alpha \frac{dJ(w)}{dw}$$
 로지스틱 회귀 모델에 여러 층을 추가하여 확장한 것이 바로 신경망 모델이다. 코세라 실습 강의 자료로 비교하자면 다음과 같다. 
 
 ![](imgs/1.png)
-
-
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MjkxODI5NzAsMTkwODkwMjU0OCwtMj
-kzNDY2NTQ3LC00Nzk1NTU3MDQsLTIwMjUwMzcyMDgsMTEwNjcy
-MjUxOSw5MDg3NTgwNDIsLTEzNzM1ODAyNV19
--->
