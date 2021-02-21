@@ -62,17 +62,17 @@ $$w := w - \alpha \frac{dJ(w)}{dw}$$
 위와 같은 형태의 신경망 모델은 `input layer`, `hidden layer`, `output layer` 총 3가지 레이어가 있는 단순한 형태로, 2-layer 신경망 모델이라 불리운다. *일반적으로 신경망 모델에서 input layer는 수로 안 셈*.  여기서 `hidden layer`를 더 많이 (깊게) 쌓은 것을 딥러닝 모델이라 부른다.
 
 ### Activation functions
-모든 학습과 역전파 과정은 `Logistic Regression` 때와 유사하나, 한 층 쌓였다고 파라미터나 기타 수식이 상당히 복잡해져서 이차 난관이 온다. 우선 새로운 개념도 추가되는데, 단순히 `sigmoid` 함수를 사용했던 `Logistic Regression`과 달리 신경망 모델에서는 층마다 activation function (활성 함수)를 달리 설정해주곤 한다. 간단히 활성 함수의 종류와 활용도를 언급하고 마친다.
+모든 학습과 역전파 과정은 `Logistic Regression` 때와 유사하나, 한 층 쌓였다고 파라미터나 기타 수식이 상당히 복잡해져서 이차 난관이 온다. 우선 새로운 개념도 추가되는데, 단순히 `sigmoid` 함수를 사용했던 `Logistic Regression`과 달리 신경망 모델에서는 층마다 activation function (활성 함수)를 달리 설정해주곤 한다. 간단히 활성 함수의 종류와 용례를 언급하고 넘어가겠다.
 
 #### Sigmoid
 ![Image for post](https://miro.medium.com/max/3268/1*a04iKNbchayCAJ7-0QlesA.png)
 
-- 한가지 예외 **이진 분류 문제의 출력층**일 경우를 제외하고는 딥러닝에서 거의 사용되지 않는다.  
+- 한가지 예외, **이진 분류 문제의 출력층**일 경우를 제외하고는 딥러닝에서 거의 사용되지 않는다.  
 
 ![Image for post](https://miro.medium.com/max/3196/1*pHjovxWB8BvI71ZkS-o_3A.png)
 
-- 거의 대부분 sigmoid 보다 성능이 좋다. 
-- 정확한 이유는 알 수 없지만 출력값이 -1에서 1 사이의 값으로 나오면서 평균값이 0에 가깝게 해주기 때문. **데이터가 중심에 오기 때문에 성능을 향상시켜 준다고 한다.**
+- 거의 대부분 `sigmoid` 보다 성능이 좋다. 
+- 정확한 이유는 알 수 없지만 출력값이 -1에서 1 사이의 값으로 나오면서 평균값이 0에 가깝게 해주기 때문이라 추정. **평균값이 0이면 데이터가 중심에 오기 때문에 일반적을 성능이 향상된다고 한다**
 
 sigmoid와 tanh의 치명적인 한계는, z 값이 매우 크거나 작을 때 gradient (기울기)가 0에 가깝게 된다는 점이다. 이는 gradient descent의 수렴 속도를 매우 느리게 하기 때문에 잘 사용되지 않는다.
 
@@ -100,7 +100,7 @@ hidden layer 수가 적으면 y를 잘 예측하기 위해 많은 노드가 필�
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1ODI1MzU4MTEsLTY3NTE5Nzg0MCwzOD
+eyJoaXN0b3J5IjpbLTE2NzYwMTgyMjQsLTY3NTE5Nzg0MCwzOD
 Y3MzYwNDMsOTg0MjcwMzYxLC0xNTQ4NDMyODQ1LC0yMDI3MjIy
 NjE3XX0=
 -->
