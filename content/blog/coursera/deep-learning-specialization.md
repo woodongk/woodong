@@ -20,7 +20,7 @@ $$\hat{y} = \sigma(W^Tx + b)$$
 - $\sigma$ : `sigmoid` 함수
 - W, b : 모델의 파라미터
 
-여기서 중요한 부분은 `sigmoid`함수 부분인데, 아래 그림은 `sigmoid`함수를 나타낸다. 어떠한 값을 받아도 0 ~ 1 사이의 값으로 변환해주는 것을 볼 수 있다. 이는 확률의 개념으로 쉽게 이해할 수 있다. 만약 받은 값 z (e.g., 고양이일 확률)가 매우 클 경우 그 값은 1에 가까울 것이고 매우 작을 경우 0에 가까워질 것이다. **즉, `Logistic Regression` 은 0 ~ 1 사이의 확률값으로 어떤 예측에 대한 수치를 표현하는 것이 핵심이다.** 
+여기서 중요한 부분은 `sigmoid`함수 부분인데, 아래 그림은 `sigmoid`함수를 나타낸다. 어떠한 값을 받아도 0 ~ 1 사이의 값으로 변환해주는 것을 볼 수 있다. 이는 확률의 개념으로 쉽게 이해할 수 있다.  **즉, `Logistic Regression` 은 0 ~ 1 사이의 확률값으로 어떤 예측에 대한 수치를 표현하는 것이 핵심이다.** 
 
 ![logistic regression 이미지 검색결과](https://miro.medium.com/max/2400/1*RqXFpiNGwdiKBWyLJc_E7g.png)
 
@@ -97,6 +97,6 @@ hidden layer 수가 적으면 y를 잘 예측하기 위해 많은 노드가 필�
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgxOTQ4NTAxLDM4NjczNjA0Myw5ODQyNz
+eyJoaXN0b3J5IjpbMjk0NzA5NjM4LDM4NjczNjA0Myw5ODQyNz
 AzNjEsLTE1NDg0MzI4NDUsLTIwMjcyMjI2MTddfQ==
 -->
