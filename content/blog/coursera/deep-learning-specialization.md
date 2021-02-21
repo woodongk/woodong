@@ -52,10 +52,11 @@ $$w := w - \alpha \frac{dJ(w)}{dw}$$
 
 ---
 ## Neural Network
-로지스틱 회귀 모델에 여러 층을 추가하여 확장한 것이 바로 신경망 모델이다. 
+로지스틱 회귀 모델에 여러 층을 추가하여 확장한 것이 바로 신경망 모델이다. 코세라 실습 강의 자료로 비교하자면 다음과 같다. 
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkwODkwMjU0OCwtMjkzNDY2NTQ3LC00Nz
-k1NTU3MDQsLTIwMjUwMzcyMDgsMTEwNjcyMjUxOSw5MDg3NTgw
-NDIsLTEzNzM1ODAyNV19
+eyJoaXN0b3J5IjpbLTUxNDE1MDAyOSwxOTA4OTAyNTQ4LC0yOT
+M0NjY1NDcsLTQ3OTU1NTcwNCwtMjAyNTAzNzIwOCwxMTA2NzIy
+NTE5LDkwODc1ODA0MiwtMTM3MzU4MDI1XX0=
 -->
