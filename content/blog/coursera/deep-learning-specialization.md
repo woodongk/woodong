@@ -6,7 +6,7 @@ draft: false
 
 ---
 
-앤드류 응 선생님의 딥러닝 전문가 코세라 강의. 구글 부트캠프 수료 과정에서 중점적으로 들어야했 강의이다. 2017년에 나온 강의기에 최신 트렌드를 담았다고 볼 수는 없으나 딥러닝 기초를 확립하기에 좋은 강의이다. 이미 머신러닝과 딥러닝 기초적인 내용은 개인적으로 충분하다고 오만하게 판단했지만, 첫주차 강의를 듣고 그 생각이 바뀌었다. 다른 사람들도 이 강의를 통해 확실히 딥러닝 AI 지식 기초를 다질 수 있을 것이라 확신한다.
+앤드류 응 선생님의 딥러닝 전문가 코세라 강의. 구글 부트캠프 수료 과정에서 중점적으로 들어야했던 강의이다. 2017년에 나온 강의기에 최신 트렌드를 담았다고 볼 수는 없으나 딥러닝 기초를 다지기에 좋은 강의이다. 이미 머신러닝과 딥러닝 기초적인 내용은 개인적으로 충분하다고 오만하게 판단했지만, 첫주차 강의를 듣고 그 생각이 바뀌었다. 다른 사람들도 이 강의를 통해 확실히 딥러닝 AI 지식 기초를 다질 수 있을 것이라 확신한다.
 
 코스는 총 5개로 구성되어 있으며, 수료하면서 요약했던 내용을 개인적인 복습 차원에서 요약 및 정리를 하려고 한다. 역전파 등 수식 과정은 이 강의 내용에서나 유튜브에서나 훨씬 더 잘 설명되어 있다고 판단되어, 이론 위주로 내용을 정리해보았다. 물론 필연적으로 수식이 등장하겠지만 깔끔하게 보여지기 위해 강의 노트를 옮겨왔다. 기본적인 annotation은 안다고 가정하였다.
 
@@ -61,10 +61,19 @@ $$w := w - \alpha \frac{dJ(w)}{dw}$$
 ### Activation functions
 모든 학습과 역전파 과정은 로지스틱 회귀 때와 유사하나, 한 층 쌓였다고 파라미터 수가 상당히 복잡해져서 이차 난관이 온다. 일단 새로운 하이퍼파라미터도 추가되는데, 단순히 sigmoid 함수를 사용했던 로지스틱 회귀 모델과 달리 신경망 모델에서는 층마다 activation function(활성 함수)를 달리 설정해주곤 한다. 간단히 활성 함수의 종류를 언급하고 마친다.
 
+#### Sigmoid
+![Image for post](https://miro.medium.com/max/3268/1*a04iKNbchayCAJ7-0QlesA.png)
+
+
+![Image for post](https://miro.medium.com/max/3196/1*pHjovxWB8BvI71ZkS-o_3A.png)
+
+
+![Image for post](https://miro.medium.com/max/3228/1*LiBZo_FcnKWqoU7M3GRKbA.png)
+
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM0MTkzNjQ4NSwtMTU0ODQzMjg0NSwtMj
-AyNzIyMjYxN119
+eyJoaXN0b3J5IjpbMjA2MDEwODI2LC0xNTQ4NDMyODQ1LC0yMD
+I3MjIyNjE3XX0=
 -->
