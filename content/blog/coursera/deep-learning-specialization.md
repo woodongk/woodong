@@ -39,9 +39,9 @@ $$L(\hat{y}, y) = -(ylog\hat{y} + (1-y)log(1-\hat{y}))$$
 
 ---
 ## Gradient Descent
-손실 함수, 비용 함수 등등 모델이 예측을 보다 더 정답에 가깝게 하기 위해서는 이 비용 함수를 최소화해야 한다. 
+모델이 어떠한 input을 보다 더 정답에 가깝게 예측하기 위해서는 **비용 함수 J**를 최소화해야 한다. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4Mzg3OTA2MjksLTQ3OTU1NTcwNCwtMj
+eyJoaXN0b3J5IjpbLTE1MzkzMDk1ODYsLTQ3OTU1NTcwNCwtMj
 AyNTAzNzIwOCwxMTA2NzIyNTE5LDkwODc1ODA0MiwtMTM3MzU4
 MDI1XX0=
 -->
