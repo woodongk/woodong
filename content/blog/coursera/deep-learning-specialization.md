@@ -79,12 +79,13 @@ $$w := w - \alpha \frac{dJ(w)}{dw}$$
 
 ![Image for post](https://miro.medium.com/max/3228/1*LiBZo_FcnKWqoU7M3GRKbA.png)
 
-- **앤드류응 선생님 추천**
+- **앤드류응 선생님 추천 (웬만해선 `ReLU` 쓰자!)**
 1. 음수 일 때 0이 되는 것은 단점일 수 있으나, 실제로는 작동 잘한다.
 2. 빠르다! (함수가 단순해서) 
 3. 0으로 가면 학습 속도 저하의 가능성이 있지만, 일반적으로 z는 양수이기 때문에 빠른 편. 
 
-*ReLU의 변형태인 Leaky ReLU가 이후 등장하였지만, 딱히 좋은 성능 차이를 내진 않는다고 함. 거의 대부분 작동이 잘 된다고 한다.* 
+*이후 `ReLU`의 변형태인` Leaky ReLU`가 등장하였지만, 딱히 좋은 성능 차이를 내진 않는다고 한다. 거의 대부분 작동이 잘 된다고 한다. 앤드류 응 선생님이 굳이 Leaky? 라고 하셨음* 
+2017년 강의라서 많이 달라졌을 수도 있지만, 본인도 최근 프로젝트에서 `ReLU`를 주로 사용했다.
 
 ---
 그렇다면 왜 딥러닝이 효과적인가?
@@ -100,7 +101,7 @@ hidden layer 수가 적으면 y를 잘 예측하기 위해 많은 노드가 필�
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAyMDUyNDkxMiwtNjc1MTk3ODQwLDM4Nj
+eyJoaXN0b3J5IjpbLTk2MjI2Mzg0MSwtNjc1MTk3ODQwLDM4Nj
 czNjA0Myw5ODQyNzAzNjEsLTE1NDg0MzI4NDUsLTIwMjcyMjI2
 MTddfQ==
 -->
