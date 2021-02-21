@@ -14,8 +14,11 @@ draft: false
 ## Logistic Regression
 딥러닝을 배우기 전에 먼저 `Logistic Regression` 을 알아야 한다. `Logistic Regression` 은 어떤 x (features)를 통해 Y를 예측하는데 활용되는 기본 선형 확률 모델이다. 강의에 나왔던 예시로 예를 들자면 **어떤 사진**이 주어졌을 때 **사진이 고양이인지 강아지인지 판단하는 이진 분류 문제**를 풀기 위해 사용되는 기초 모델이다. 
 
-고양이인지, 강아지인지에 대한 예측 정확도를 로지스틱 회귀 모델은 0에서 1 사이의 확률로 표현해준다. 이를 수식으로 나타낸다면 예측값인 $\hat{y}$은 다음과 같다.
+고양이인지, 강아지인지에 대한 예측 정확도를 로지스틱 회귀 모델은 0에서 1 사이의 확률로 표현해준다. 이를 수식으로 나타낸다면 예측값인 $\hat{y}$은 다음과 같이 표현된다.
 $$\hat{y} = \sigma(W^Tx + b)$$
+
+- $\sigma$ : `sigmoid` 함수
+- W, b : 모델의 파라미터
 
 여기서 중요한 부분은 `Sigmoid`함수 부분인데, 아래 그림은 `Sigmoid`함수를 나타낸다. 어떠한 값을 받아도 0 ~ 1 사이의 값으로 변환해주는 것을 볼 수 있다.
 
@@ -96,6 +99,6 @@ hidden layer 수가 적으면 y를 잘 예측하기 위해 많은 노드가 필�
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyOTg0MjU0MjUsMzg2NzM2MDQzLDk4ND
-I3MDM2MSwtMTU0ODQzMjg0NSwtMjAyNzIyMjYxN119
+eyJoaXN0b3J5IjpbODE2MDczMDE5LDM4NjczNjA0Myw5ODQyNz
+AzNjEsLTE1NDg0MzI4NDUsLTIwMjcyMjI2MTddfQ==
 -->
