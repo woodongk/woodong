@@ -26,10 +26,13 @@ $$\hat{y} = \sigma(W^Tx + b)$$
 
 ---
 
-여기서 로지스틱 회귀 모델로부터 나온 예측값을 $y$가 아닌 $\hat{y}$으로 표현했다. 이유는 이 수치는 어디까지나 **정답**이 아닌 **예측값**이기 때문이다. 분류 모델의 정확도를 평가 하기 위해 로지스틱 회귀 모델에서는 정답과 예측값 간의 차이를 산출한 뒤, 이를 최소화하는 것을 목적으로 한다. 말
+여기서 로지스틱 회귀 모델로부터 나온 예측값을 $y$가 아닌 $\hat{y}$으로 표현했다. 이유는 이 수치는 어디까지나 **정답**이 아닌 **예측값**이기 때문이다. 분류 모델의 정확도를 평가 하기 위해 로지스틱 회귀 모델에서는 정답과 예측값 간의 차이를 산출한 뒤, 이를 최소화하는 것을 목적으로 한다. 
+
+여기서 두가지 유사한 개념이 나온다. 
+Loss fuction = $L(\hat{y}, h) = $
 
 여기서 두가지 개념이 나오는데, Loss function과 cost function 두 개념이 나온다. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI3NjA4OTM4MiwxMTA2NzIyNTE5LDkwOD
-c1ODA0MiwtMTM3MzU4MDI1XX0=
+eyJoaXN0b3J5IjpbLTIwMjUwMzcyMDgsMTEwNjcyMjUxOSw5MD
+g3NTgwNDIsLTEzNzM1ODAyNV19
 -->
