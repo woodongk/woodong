@@ -59,16 +59,16 @@ $$w := w - \alpha \frac{dJ(w)}{dw}$$
 정말 로지스틱 회귀에 하나 레이어가 추가되기만 해도 신경망 모델이라 불린다. 위와 같은 형태의 신경망 모델은 input layer, hidden layer, output layer 총 3가지 레이어가 있는 단순한 형태로, 2-layer 신경망 모델이라 불리운다. **일반적으로 신경망 모델에서 input layer는 수로 안 센다고 한다** 
 
 ### Activation functions
-모든 학습과 역전파 과정은 로지스틱 회귀 때와 유사하나, 한 층 쌓였다고 파라미터 수가 상당히 복잡해져서 이차 난관이 온다. 일단 새로운 하이퍼파라미터도 추가되는데, 단순히 sigmoid 함수를 사용했던 로지스틱 회귀 모델과 달리 신경망 모델에서는 층마다 activation function(활성 함수)를 달리 설정해주곤 한다. 간단히 활성 함수의 종류를 언급하고 마친다.
+모든 학습과 역전파 과정은 로지스틱 회귀 때와 유사하나, 한 층 쌓였다고 파라미터 수가 상당히 복잡해져서 이차 난관이 온다. 일단 새로운 하이퍼파라미터도 추가되는데, 단순히 sigmoid 함수를 사용했던 로지스틱 회귀 모델과 달리 신경망 모델에서는 층마다 activation function(활성 함수)를 달리 설정해주곤 한다. 간단히 활성 함수의 종류와 활용도를 언급하고 마친다.
 
 #### Sigmoid
 ![Image for post](https://miro.medium.com/max/3268/1*a04iKNbchayCAJ7-0QlesA.png)
 
 - 한가지 예외 **이진 분류 문제의 출력층**일 경우를 제외하고는 딥러닝에서 거의 사용되지 않는다.  
 
-
-
 ![Image for post](https://miro.medium.com/max/3196/1*pHjovxWB8BvI71ZkS-o_3A.png)
+
+- 거의 대부분 sigmoid 보다 성능이 좋다. 정확한 이유는 알 수 없지만 출력값이 -1에서 1 사이의 값으로 나오면서 평균값이 0에
 
 
 ![Image for post](https://miro.medium.com/max/3228/1*LiBZo_FcnKWqoU7M3GRKbA.png)
@@ -77,6 +77,6 @@ $$w := w - \alpha \frac{dJ(w)}{dw}$$
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MjAwNDM4NjMsLTE1NDg0MzI4NDUsLT
-IwMjcyMjI2MTddfQ==
+eyJoaXN0b3J5IjpbMjQ5MjkzMjgzLC0xNTQ4NDMyODQ1LC0yMD
+I3MjIyNjE3XX0=
 -->
