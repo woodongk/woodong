@@ -47,12 +47,12 @@ $$w := w - \alpha \frac{dJ(w)}{dw}$$
 - $\alpha$ : 학습율. w가 다음에 얼마나 옆으로 갈 지에 대한 하이퍼파라미터
 - $\frac{dJ(w)}{dw}$ :  w의 변화율 (기울기)
 
-즉, 이후로는 비용함수를 갱신하고 계속해서 위 식을 반복함으로써 w를 새롭게 업데이트 해나가면서  학습이 진행한다. 
-ㅇ
+즉, 이후로는 비용함수를 갱신하고 계속해서 위 식을 반복함으로써 w를 새롭게 업데이트 해나가면서  학습이 진행한다. 그렇다면 더 자세하게, 어떻게 학습이 진행되는가? 는 생략. 역전파 유튜브를 찾아보자.
+
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg5OTU1OTg3MSwtNDc5NTU1NzA0LC0yMD
+eyJoaXN0b3J5IjpbLTI5MzQ2NjU0NywtNDc5NTU1NzA0LC0yMD
 I1MDM3MjA4LDExMDY3MjI1MTksOTA4NzU4MDQyLC0xMzczNTgw
 MjVdfQ==
 -->
