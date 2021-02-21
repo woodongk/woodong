@@ -76,10 +76,12 @@ sigmoid와 tanh의 치명적인 한계는, z 값이 매우 크거나 작을 때 
 
 ![Image for post](https://miro.medium.com/max/3228/1*LiBZo_FcnKWqoU7M3GRKbA.png)
 
-
-
+- **앤드류응 선생님 추천**
+- 1. 음수 일 때 0이 되는 것은 단점일 수 있으나, 실제로는 작동 잘한다.
+- 2. 기울기에 의한 효과가 적어서 빠르다! 
+- 3. 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjgzNjgxOTQwLC0xNTQ4NDMyODQ1LC0yMD
-I3MjIyNjE3XX0=
+eyJoaXN0b3J5IjpbLTE3MDUzMTU4MTEsLTE1NDg0MzI4NDUsLT
+IwMjcyMjI2MTddfQ==
 -->
