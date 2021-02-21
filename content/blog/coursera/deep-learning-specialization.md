@@ -35,15 +35,13 @@ $$L(\hat{y}, y) = -(ylog\hat{y} + (1-y)log(1-\hat{y}))$$
 
 직관적으로 위 식은 만약 y가 1일 경우 Loss function의 값이 최소가 되기 위해서는 $\hat{y}$를 커지는 방향으로 학습해야 하고, y가 0일 경우 $\hat{y}$이 작아지는 방향으로 학습이 진행되기 때문에 적절하다. 
 
-유사한 개념으로 Cost function이 등장하는데, 위에서 계속 언급했던 Loss function과 개념적으로는 차이가 거의 없다. 다만 차이가 있다면 Loss function은 단일(single) training example에 대한 error 이며, Cost function은 전체 training set에 대한 error의 평균으로 설명하였다. 
+유사한 개념으로 Cost function이 등장하는데, 위에서 계속 언급했던 Loss function과 개념적으로는 차이가 거의 없다. 다만 차이가 있다면 Loss function은 단일(single) training example에 대한 error 이며, Cost function은 전체 training set에 대한 error의 평균이다. 어쨌거나 말하고자 하는 것은 같기에 이후 용어는 비용 함수로 통일하겠다.
 
 ---
-Gradient Descent
+## Gradient Descent
 
-
-여기서 두가지 개념이 나오는데, Loss function과 cost function 두 개념이 나온다. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQwNjExNjExNSwtNDc5NTU1NzA0LC0yMD
+eyJoaXN0b3J5IjpbMTA5ODk5Nzc3MSwtNDc5NTU1NzA0LC0yMD
 I1MDM3MjA4LDExMDY3MjI1MTksOTA4NzU4MDQyLC0xMzczNTgw
 MjVdfQ==
 -->
