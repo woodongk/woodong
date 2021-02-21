@@ -34,9 +34,9 @@ $$L(\hat{y}, y) = \frac{1}{2}(\hat{y} - y)^2$$
 그러나 `gradient descent` (모델이 훈련 과정에서 찾아야 할 최소값)의 최적값을 찾기 힘들다는 단점때문에 비슷한 역할을 하는 로그 함수를 사용한다. 
 $$L(\hat{y}, y) = -(ylog\hat{y} + (1-y)log(1-\hat{y}))$$
 
-직관적으로 위 식은 만약 y가 1일 경우 비용 함수를 최소화 Loss function의 값이 최소가 되기 위해서는 $\hat{y}$를 커지는 방향으로 학습해야 하고, y가 0일 경우 $\hat{y}$이 작아지는 방향으로 학습이 진행되기 때문에 적절하다. 
+직관적으로 위 식은 만약 $y$가 1일 경우 비용 함수를 최소화하기 위해 $\hat{y}$가 커지는 방향으로 학습을 진행하고, $y$가 0일 경우 $\hat{y}$이 작아지는 방향으로 학습이 진행되기 때문에 적절한 식이라고 볼 수 있다.
 
-유사한 개념으로 Cost function이 등장하는데, 위에서 계속 언급했던 Loss function과 개념적으로는 차이가 거의 없다. 다만 차이가 있다면 Loss function은 단일(single) training example에 대한 error 이며, Cost function은 전체 training set에 대한 error의 평균이다. 어쨌거나 말하고자 하는 것은 같기에 이후 용어는 비용 함수 $J$ 로 통일하겠다.
+Loss function과 유사한 용어로 Cost function도 있는데, Loss function과 개념적으로는 차이가 거의 없는 Cost functionㄷ. 다만 차이가 있다면 Loss function은 단일(single) training example에 대한 error 이며, Cost function은 전체 training set에 대한 error의 평균이다. 어쨌거나 말하고자 하는 것은 같기에 이후 용어는 비용 함수 $J$ 로 통일하겠다.
 
 ---
 ### Gradient Descent
@@ -98,7 +98,7 @@ hidden layer 수가 적으면 y를 잘 예측하기 위해 많은 노드가 필�
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM3MDU5MTEyOSwtNjc1MTk3ODQwLDM4Nj
-czNjA0Myw5ODQyNzAzNjEsLTE1NDg0MzI4NDUsLTIwMjcyMjI2
-MTddfQ==
+eyJoaXN0b3J5IjpbLTE5ODEyMTEyMTIsLTY3NTE5Nzg0MCwzOD
+Y3MzYwNDMsOTg0MjcwMzYxLC0xNTQ4NDMyODQ1LC0yMDI3MjIy
+NjE3XX0=
 -->
