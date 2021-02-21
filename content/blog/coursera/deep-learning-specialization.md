@@ -10,8 +10,9 @@ draft: false
 
 코스는 총 5개로 구성되어 있으며, 수료하면서 요약했던 내용을 개인적인 복습 차원에서 요약 및 정리를 하려고 한다. 역전파 등 수식 과정은 이 강의 내용에서나 유튜브에서나 훨씬 더 잘 설명되어 있다고 판단되어, 이론 위주로 내용을 정리해보았다. 물론 필연적으로 수식이 등장하겠지만 깔끔하게 보여지기 위해 강의 노트를 옮겨왔다. 기본적인 annotation은 안다고 가정하였다.
 
-### Course 1. Neural Networks and Deep Learning
+## Course 1. Neural Networks and Deep Learning
 
+## Logistic Regression
 딥러닝을 알기 위해서는 먼저 `Logistic Regression` 을 알아야 한다. `Logistic Regression` 은 어떤 x (features) Y를 예측하는데 사용되는 기본 선형 확률 모델이다. 강의에 나왔던 예시로 예를 들자면 **어떤 사진**이 주어졌을 때 **사진이 고양이인지, 강아지인지 판단하는 작업**을 의미한다. 고양이인지, 강아지인지에 대한 분류 정확도를 로지스틱 회귀 모델은 0에서 1 사이의 확률로 표현해준다. 
 
 이를 수식으로 간단히 정리하자면 예측값인 $\hat{y}$은 다음과 같다.
@@ -26,8 +27,36 @@ $$\hat{y} = \sigma(W^Tx + b)$$
 
 ---
 
-여기서 로지스틱 회귀 모델로부터 나온 예측값을 $y$가 아닌 $\hat{y}$으로 표현했다. 이유는 이 수치는 어디까지나 **정답**이 아닌 **예측값**이기 때문이다. 분류 모델의 정확도를 평가 하기 위해 
+여기서 로지스틱 회귀 모델로부터 나온 예측값을 $y$가 아닌 $\hat{y}$으로 표현했다. 이유는 이 수치는 어디까지나 **정답**이 아닌 **예측값**이기 때문이다. 분류 모델의 정확도를 평가 하기 위해 로지스틱 회귀 모델에서는 정답과 예측값 간의 차이를 산출한 뒤, 이를 최소화하는 것을 목적으로 한다.  회귀분석 모델에서 파라미터 W와 b를 훈련시키기 위해서는 먼저 **Loss function**를 정의해야 한다. 단순히 아래처럼 예측값과 정답 간 차이를 Loss function으로 설정할 수도 있다. 
+$$L(\hat{y}, y) = \frac{1}{2}(\hat{y} - y)^2$$
+그러나 `gradient descent (모델이 훈련과정에서 찾아야 할, 비용함수가 최소가 되는 값)의 최적값을 찾기 힘들다는 단점` 때문에 비슷한 역할을 하는 로그 함수를 사용한다. 
+
+$$L(\hat{y}, y) = -(ylog\hat{y} + (1-y)log(1-\hat{y}))$$
+
+직관적으로 위 식은 만약 y가 1일 경우 Loss function의 값이 최소가 되기 위해서는 $\hat{y}$를 커지는 방향으로 학습해야 하고, y가 0일 경우 $\hat{y}$이 작아지는 방향으로 학습이 진행되기 때문에 적절하다. 
+
+유사한 개념으로 Cost function이 등장하는데, 위에서 계속 언급했던 Loss function과 개념적으로는 차이가 거의 없다. 다만 차이가 있다면 Loss function은 단일(single) training example에 대한 error 이며, Cost function은 전체 training set에 대한 error의 평균이다. 어쨌거나 말하고자 하는 것은 같기에 이후 용어는 비용 함수 $J$ 로 통일하겠다.
+
+---
+## Gradient Descent
+모델이 어떠한 input을 보다 더 정답에 가깝게 예측하기 위해서는 **비용 함수 J**를 최소화해야 한다. 이 비용 함수는 $y$와 $\hat{y}$로 정의되며 그렇기에 파라미터 W와 b로 구성되어 있다. 우리는 이제 비용 함수 J를 최소로 만드는 W와 b를 찾는 것이 목적이다. 이러한 파라미터 W와 b를 찾기 위해 사용되는 알고리즘이 gradient descent algorithm(경사 하강법) 이며, 어떤 함수의 최소값을 찾기 위해 사용되는 일반적인 방법이다. 함수의 기울기를 구하고, 경사의 절대값이 낮은 방향으로 이동하는 것이다. 아마 이 분야를 처음 접하면 일차 난관이 여기일 것이라 생각된다. 말은 어렵지만 사실 어렵지 않은 개념이다. 
+
+![gradient descent 이미지 검색결과](http://media5.datahacker.rs/2018/06/word-image-30.jpeg)
+(b는 고려하지 않고 w만 고려함) 위 그림에서 w가 목표로 해야할 값은 global optimum이다. 만약 기울기가 음수라면, global optimum이 가장 기울기 경사가 급격한 오른쪽에 있을 것이라고 가정한다. 그러므로 다음 w = w + 양수. 만약 기울기가 양수라면, global optimum은 기울기 경사가 급격한 방향인 왼쪽에 있을 것이라고 가정하고 w = w - 양수. 이러한 w를 업데이트 과정을 식으로 표현한다면 다음과 같다. 
+$$w := w - \alpha \frac{dJ(w)}{dw}$$
+- $\alpha$ : 학습율. w가 다음에 얼마나 옆으로 갈 지에 대한 하이퍼파라미터
+- $\frac{dJ(w)}{dw}$ :  w의 변화율 (기울기)
+
+즉, 이후로는 비용함수를 갱신하고 계속해서 위 식을 반복함으로써 w를 새롭게 업데이트 해나가면서  학습이 진행한다. 그렇다면 더 자세하게, 어떻게 학습이 진행되는가? 는 생략. 역전파 유튜브를 찾아보자.
+
+
+---
+## Neural Network
+로지스틱 회귀 모델에 여러 층을 추가하여 확장한 것이 바로 신경망 모델이다. 코세라 실습 강의 자료로 비교하자면 다음과 같다. 
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEwNjcyMjUxOSw5MDg3NTgwNDIsLTEzNz
-M1ODAyNV19
+eyJoaXN0b3J5IjpbLTUxNDE1MDAyOSwxOTA4OTAyNTQ4LC0yOT
+M0NjY1NDcsLTQ3OTU1NTcwNCwtMjAyNTAzNzIwOCwxMTA2NzIy
+NTE5LDkwODc1ODA0MiwtMTM3MzU4MDI1XX0=
 -->
