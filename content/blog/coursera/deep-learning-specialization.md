@@ -14,20 +14,20 @@ draft: false
 ## Logistic Regression
 딥러닝을 배우기에 앞서 먼저 기초가 되는 `Logistic Regression` 에 대해 익혀야 한다. `Logistic Regression` 은 어떤 x (features)를 통해 Y를 예측하는데 활용되는 기본 선형 확률 모델이다. 강의에 나왔던 예시로 예를 들자면 **어떤 사진**이 주어졌을 때 **사진이 고양이인지 강아지인지 판단하는 이진 분류 문제**를 풀기 위해 사용되는 기초 모델이다. 
 
-고양이인지, 강아지인지에 대한 예측 정확도를 `Logistic Regression`은 0에서 1 사이의 확률로 표현해준다. 이를 수식으로 나타낸다면 예측값인 $\hat{y}$은 다음과 같이 표현할 수 있다.
+고양이인지, 강아지인지에 대한 예측 정확도를 `Logistic Regression`은 0에서 1 사이의 확률로 표현해준다. 이를 수식으로 나타낸다면 예측값인 $\hat{y}$은 다음과 같이 표현할 수 있다. 
 $$\hat{y} = \sigma(W^Tx + b)$$
 
 - $\sigma$ : `sigmoid` 함수
 - W, b : 모델의 파라미터
 
-여기서 중요한 부분은 `sigmoid`함수 부분인데, 아래 그림은 `sigmoid`함수를 나타낸다. 어떠한 값을 받아도 0 ~ 1 사이의 값으로 변환해주는 것을 볼 수 있다. 이는 확률의 개념으로 쉽게 이해할 수 있다.  **즉, `Logistic Regression` 은 0 ~ 1 사이의 확률값으로 어떤 예측에 대한 수치를 표현하는 것이 핵심이다.** 
+여기서 중요한 부분은 `sigmoid`함수인데, 아래 그림을 통해 `sigmoid`함수는. 어떠한 값을 받아도 0 ~ 1 사이의 값으로 변환해주는 것을 볼 수 있다.  **즉, `Logistic Regression` 은 0 ~ 1 사이의 확률값으로 어떤 예측에 대한 수치를 표현하는 것이 핵심이다.** 
 
 ![logistic regression 이미지 검색결과](https://miro.medium.com/max/2400/1*RqXFpiNGwdiKBWyLJc_E7g.png)
 
 
 ---
 ### 비용 함수
-로지스틱 회귀 모델로부터 나온 예측값을 $y$가 아닌 $\hat{y}$으로 표현했다. 이유는 이 수치는 어디까지나 **정답**이 아닌 **예측값**이기 때문이다. 분류 모델의 정확도를 평가 하기 위해 로지스틱 회귀 모델에서는 정답과 예측값 간의 차이를 산출한 뒤, 이를 최소화하는 것을 목적으로 한다.  회귀분석 모델에서 파라미터 W와 b를 훈련시키기 위해서는 먼저 **Loss function**를 정의해야 한다. 단순히 아래처럼 예측값과 정답 간 차이를 Loss function으로 설정할 수도 있다. 
+`Logistic Regression` 으로부터 나온 예측값을 $y$가 아닌 $\hat{y}$으로 표현했다. 이유는 이 수치는 어디까지나 **정답**이 아닌 **예측값**이기 때문이다. 분류 모델의 정확도를 평가 하기 위해 `Logistic Regression`에서는 정답과 예측값 간의 차이를 산출한 뒤, 이를 최소화하는 것을 목적으로 한다.  회귀분석 모델에서 파라미터 W와 b를 훈련시키기 위해서는 먼저 **Loss function**를 정의해야 한다. 단순히 아래처럼 예측값과 정답 간 차이를 Loss function으로 설정할 수도 있다. 
 $$L(\hat{y}, y) = \frac{1}{2}(\hat{y} - y)^2$$
 그러나 `gradient descent (모델이 훈련과정에서 찾아야 할, 비용함수가 최소가 되는 값)의 최적값을 찾기 힘들다는 단점` 때문에 비슷한 역할을 하는 로그 함수를 사용한다. 
 
@@ -97,6 +97,6 @@ hidden layer 수가 적으면 y를 잘 예측하기 위해 많은 노드가 필�
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjk0NzA5NjM4LDM4NjczNjA0Myw5ODQyNz
-AzNjEsLTE1NDg0MzI4NDUsLTIwMjcyMjI2MTddfQ==
+eyJoaXN0b3J5IjpbMTkxMzMzMzAxMSwzODY3MzYwNDMsOTg0Mj
+cwMzYxLC0xNTQ4NDMyODQ1LC0yMDI3MjIyNjE3XX0=
 -->
