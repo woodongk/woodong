@@ -26,7 +26,7 @@ $$\hat{y} = \sigma(W^Tx + b)$$
 **즉, 로지스틱 회귀 모델은 0 ~ 1 사이의 확률값으로 어떤 예측에 대한 수치를 표현하는 것이 핵심이다.** 만약 받은 값 z가 매우 클 경우 그 값은 1에 가까울 것이고 매우 작을 경우 0에 가까워질 것이다.
 
 ---
-
+### 비용 함수
 여기서 로지스틱 회귀 모델로부터 나온 예측값을 $y$가 아닌 $\hat{y}$으로 표현했다. 이유는 이 수치는 어디까지나 **정답**이 아닌 **예측값**이기 때문이다. 분류 모델의 정확도를 평가 하기 위해 로지스틱 회귀 모델에서는 정답과 예측값 간의 차이를 산출한 뒤, 이를 최소화하는 것을 목적으로 한다.  회귀분석 모델에서 파라미터 W와 b를 훈련시키기 위해서는 먼저 **Loss function**를 정의해야 한다. 단순히 아래처럼 예측값과 정답 간 차이를 Loss function으로 설정할 수도 있다. 
 $$L(\hat{y}, y) = \frac{1}{2}(\hat{y} - y)^2$$
 그러나 `gradient descent (모델이 훈련과정에서 찾아야 할, 비용함수가 최소가 되는 값)의 최적값을 찾기 힘들다는 단점` 때문에 비슷한 역할을 하는 로그 함수를 사용한다. 
@@ -38,7 +38,7 @@ $$L(\hat{y}, y) = -(ylog\hat{y} + (1-y)log(1-\hat{y}))$$
 유사한 개념으로 Cost function이 등장하는데, 위에서 계속 언급했던 Loss function과 개념적으로는 차이가 거의 없다. 다만 차이가 있다면 Loss function은 단일(single) training example에 대한 error 이며, Cost function은 전체 training set에 대한 error의 평균이다. 어쨌거나 말하고자 하는 것은 같기에 이후 용어는 비용 함수 $J$ 로 통일하겠다.
 
 ---
-## Gradient Descent
+### Gradient Descent
 모델이 어떠한 input을 보다 더 정답에 가깝게 예측하기 위해서는 **비용 함수 J**를 최소화해야 한다. 이 비용 함수는 $y$와 $\hat{y}$로 정의되며 그렇기에 파라미터 W와 b로 구성되어 있다. 우리는 이제 비용 함수 J를 최소로 만드는 W와 b를 찾는 것이 목적이다. 이러한 파라미터 W와 b를 찾기 위해 사용되는 알고리즘이 gradient descent algorithm(경사 하강법) 이며, 어떤 함수의 최소값을 찾기 위해 사용되는 일반적인 방법이다. 함수의 기울기를 구하고, 경사의 절대값이 낮은 방향으로 이동하는 것이다. 아마 이 분야를 처음 접하면 일차 난관이 여기일 것이라 생각된다. 말은 어렵지만 사실 어렵지 않은 개념이다. 
 
 ![과](http://media5.datahacker.rs/2018/06/word-image-30.jpeg)
@@ -58,9 +58,10 @@ $$w := w - \alpha \frac{dJ(w)}{dw}$$
 
 정말 로지스틱 회귀에 하나 레이어가 추가되기만 해도 신경망 모델이라 불린다. 위와 같은 형태의 신경망 모델은 input layer, hidden layer, output layer 총 3가지 레이어가 있는 단순한 형태로, 2-layer 신경망 모델이라 불리운다. **일반적으로 신경망 모델에서 input layer는 수로 안 센다고 한다** 
 
-모든 학습과 역전파 과정은 로지스틱 회귀 때와 유사하나, 한 층 쌓였다고 파라미터 수가 상당히 복잡해져서 이차 난관이 온다. 일단 새로운 개념은
+### Activation fuctions
+모든 학습과 역전파 과정은 로지스틱 회귀 때와 유사하나, 한 층 쌓였다고 파라미터 수가 상당히 복잡해져서 이차 난관이 온다. 일단 새로운 하이퍼파라미터도 추가되는데, 단순히 sigmoid 함수를 사용했던 로지스틱 회귀 모델과 달리 신경망 모델에서는 예측의 종류나 문제에 따라서 activation function(활
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NTU2MTA2NSwtMTU0ODQzMjg0NSwtMj
+eyJoaXN0b3J5IjpbMTMzMTA3NDgxOCwtMTU0ODQzMjg0NSwtMj
 AyNzIyMjYxN119
 -->
