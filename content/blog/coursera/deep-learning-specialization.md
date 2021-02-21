@@ -83,11 +83,14 @@ sigmoid와 tanh의 치명적인 한계는, z 값이 매우 크거나 작을 때 
 
 **ReLU의 변형태인 Leaky ReLU가 이후 등장하였지만, 딱히 좋은 성능 차이를 내진 않는다고 함**
 
-
+---
+그렇다면 왜 딥러닝이 효과적인가?
+1. Deep Neural Network 는 feature들을 representation한 뒤ㅜ, 취합한 것. 그러므로 더 많은 layer가 있을 수록 더 많은 representation이 가능하다. 
+일반적으로 low-level의 layer에서는 음소, 모서리 등의 비교적 간단한 정보를 다루고 중기와 후기 layer로 갈수록 점점 정보를 취합해서 하나
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE5MzA3NDQ1NSwtMTU0ODQzMjg0NSwtMj
+eyJoaXN0b3J5IjpbMTQxMTYwOTMzNSwtMTU0ODQzMjg0NSwtMj
 AyNzIyMjYxN119
 -->
