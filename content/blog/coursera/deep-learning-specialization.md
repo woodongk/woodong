@@ -56,9 +56,11 @@ $$w := w - \alpha \frac{dJ(w)}{dw}$$
 
 ![](imgs/1.png)
 
-정말 로지스틱 회귀에 하나 레이어가 추가되기만 해도 신경망 모델이라 불린다. 위와 같은 형태의 신경망 모델은 input layer, hidden layer, output layer 총 3가지 레이어가 있는 단순한 형태로, 2-layer 신경망 모델이라 불리운다. **일반적으로 신ㄱ 
+정말 로지스틱 회귀에 하나 레이어가 추가되기만 해도 신경망 모델이라 불린다. 위와 같은 형태의 신경망 모델은 input layer, hidden layer, output layer 총 3가지 레이어가 있는 단순한 형태로, 2-layer 신경망 모델이라 불리운다. **일반적으로 신경망 모델에서 input layer는 수로 안 센다고 한다** 
+
+모든 학습과 역전파 과정은 로지스틱 회귀 때와 유사하나, 한 층 쌓였다고 파라미터 수가 상당히 복잡해져서 이차 난관이 온다. 일단 새로운 개념은
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU5OTcyODY5MCwtMTU0ODQzMjg0NSwtMj
+eyJoaXN0b3J5IjpbLTE0NTU2MTA2NSwtMTU0ODQzMjg0NSwtMj
 AyNzIyMjYxN119
 -->
