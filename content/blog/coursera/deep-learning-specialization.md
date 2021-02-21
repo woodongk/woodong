@@ -50,7 +50,7 @@ $$w := w - \alpha \frac{dJ(w)}{dw}$$
 - $\alpha$ : 학습율. w가 다음에 얼마나 이동할 지에 대한 수치값 
 - $\frac{dJ(w)}{dw}$ :  w의 변화율 (기울기)
 
-즉, 이후로는 비용함수를 갱신하고 계속해서 위 식을 반복함으로써 w를 새롭게 업데이트 해나가면서  학습이 진행한다. 그렇다면 더 자세하게, 어떻게 학습이 진행되는가? 는 생략. 역전파 유튜브를 찾아보자.
+모델은 계속해서 위 식을 반복함으로써 w를 새롭게 갱신해나가며 학습을 진행한다. 여기서 나오는 개념이 역전파 개념이다. 그렇다면 더 자세하게, 어떻게 학습이 진행되는가? 는 생략. 유튜브를 찾아보자. 앤드류응 선생님도 말씀하셨지만 세부 수식을 모두 이해할 필요는 업다. 이해하면 좋지만, 요즘은 프레임워크가 대부분 알아서 해준다.
 
 
 ---
@@ -100,7 +100,7 @@ hidden layer 수가 적으면 y를 잘 예측하기 위해 많은 노드가 필�
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEzOTY2MDk2MSwtNjc1MTk3ODQwLDM4Nj
+eyJoaXN0b3J5IjpbMTM4MDgyNTQ4OSwtNjc1MTk3ODQwLDM4Nj
 czNjA0Myw5ODQyNzAzNjEsLTE1NDg0MzI4NDUsLTIwMjcyMjI2
 MTddfQ==
 -->
