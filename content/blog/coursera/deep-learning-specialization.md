@@ -88,7 +88,7 @@ $$w := w - \alpha \frac{dJ(w)}{dw}$$
 
 ---
 ### 딥러닝 모델은 왜 효과적인가?
-그밖에 강의에서 나온 구체적인 수식은 생략하고, 왜 딥러닝 모델이 효과적인 가에 대해서 한번 정리하고 마무리하겠다.
+그 밖에 강의에서 나온 구체적인 수식은 생략하고, 왜 딥러닝 모델이 효과적인 가에 대해서 한번 정리하고 마무리하겠다.
 
 1. Deep Neural Network 는 feature들을 representation한 뒤 취합한 것. 그러므로 **더 많은 layer가 있을 수록 더 많은 representation이 가능하다.** 일반적으로 초기 층에서는 음소, 모서리 등의 비교적 간단한 low level 정보를 배우고 중기와 후기 층으로 갈수록 점점 정보를 취합하여 복잡한 정보를 배울 수 있게 된다. (e.g., 모서리 .. 코 .. 얼굴, 음소 .. 단어 .. 문장)
 
@@ -97,7 +97,7 @@ layer 수가 적으면 y를 잘 예측하기 위해 많은 노드가 필요한�
 
 ---
 
-마무리하자면 Course 1에서는 딥러닝을 배우기 이전에 기초가 되는 `Logistic Regression`을 다루었고, 여러 기본 용어와 개념을 배웠다. Course 2에서는 보다 정교하게 모델을 구현하기 위한 용어와 개념을 다룬다 
+Course 1에서는 딥러닝을 배우기 이전에 기초가 되는 `Logistic Regression`을 다루었고, 여러 기본 용어와 개념을 배웠다. Course 2에서는 보다 정교하게 모델을 구현하기 위한 여러 실용적인 테크닉을 배운다. 
 
 
 
@@ -105,7 +105,7 @@ layer 수가 적으면 y를 잘 예측하기 위해 많은 노드가 필요한�
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NzY0OTU3ODcsLTY3NTE5Nzg0MCwzOD
-Y3MzYwNDMsOTg0MjcwMzYxLC0xNTQ4NDMyODQ1LC0yMDI3MjIy
-NjE3XX0=
+eyJoaXN0b3J5IjpbMjAyOTg1ODIxNSwtNjc1MTk3ODQwLDM4Nj
+czNjA0Myw5ODQyNzAzNjEsLTE1NDg0MzI4NDUsLTIwMjcyMjI2
+MTddfQ==
 -->
