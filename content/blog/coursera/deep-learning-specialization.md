@@ -45,9 +45,9 @@ Loss function과 유사한 용어로 Cost function도 존재한다. 개념적으
 ![과](http://media5.datahacker.rs/2018/06/word-image-30.jpeg)
 (*b는 고려하지 않고 w만 고려함*) 
 **목적: 비용 함수 J를 최소화하는 어떤 파라미터 w와 b를 찾는 것**> 
-위 그림은 비용 함수 J를 간략히 표현한 이차원 그래프이다. 모델은 비용 함수를 최소로 만드는 값인 `global optimum` 에 도달하기 위해 함수의 기울기에 따라 w를 업데이트 해나간다. 만약 기울기가 음수라면, `global optimum`이 (가장 기울기 경사가 급격한) 오른쪽에 있을 것이라고 가정한다. 그러므로 w = w + 양수. 만약 기울기가 양수라면, global optimum은 기울기 경사가 급격한 방향인 왼쪽에 있을 것이라고 가정하고 w = w - 양수. 이러한 w를 업데이트 과정을 식으로 표현한다면 다음과 같다. 
+위 그림은 비용 함수 J를 간략히 표현한 이차원 그래프이다. 모델은 비용 함수를 최소로 만드는 값인 `global optimum` 에 도달하기 위해 함수의 기울기에 따라 w를 업데이트 해나간다. 만약 기울기가 음수라면, `global optimum`이 (가장 기울기 경사가 급격한) 오른쪽에 있을 것이라고 가정한다. 그러므로 [w = w + 양수]로 업데이트. 만약 기울기가 양수라면, `global optimum`이 (기울기 경사가 급격한) 방향인 왼쪽에 있을 것이라고 가정하고 [w = w - 양수]로 업데이트. w 업데이트 과정을 식으로 표현한다면 다음과 같다. 
 $$w := w - \alpha \frac{dJ(w)}{dw}$$
-- $\alpha$ : 학습율. w가 다음에 얼마나 옆으로 갈 지에 대한 하이퍼파라미터
+- $\alpha$ : 학습율. w가 다음에 얼마나 이동할 지에 대한 수치값 
 - $\frac{dJ(w)}{dw}$ :  w의 변화율 (기울기)
 
 즉, 이후로는 비용함수를 갱신하고 계속해서 위 식을 반복함으로써 w를 새롭게 업데이트 해나가면서  학습이 진행한다. 그렇다면 더 자세하게, 어떻게 학습이 진행되는가? 는 생략. 역전파 유튜브를 찾아보자.
@@ -100,7 +100,7 @@ hidden layer 수가 적으면 y를 잘 예측하기 위해 많은 노드가 필�
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE0NzI3Mjk4MSwtNjc1MTk3ODQwLDM4Nj
+eyJoaXN0b3J5IjpbMTEzOTY2MDk2MSwtNjc1MTk3ODQwLDM4Nj
 czNjA0Myw5ODQyNzAzNjEsLTE1NDg0MzI4NDUsLTIwMjcyMjI2
 MTddfQ==
 -->
