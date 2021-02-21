@@ -29,7 +29,7 @@ $$\hat{y} = \sigma(W^Tx + b)$$
 
 여기서 로지스틱 회귀 모델로부터 나온 예측값을 $y$가 아닌 $\hat{y}$으로 표현했다. 이유는 이 수치는 어디까지나 **정답**이 아닌 **예측값**이기 때문이다. 분류 모델의 정확도를 평가 하기 위해 로지스틱 회귀 모델에서는 정답과 예측값 간의 차이를 산출한 뒤, 이를 최소화하는 것을 목적으로 한다.  회귀분석 모델에서 파라미터 W와 b를 훈련시키기 위해서는 먼저 **Loss function**를 정의해야 한다. 단순히 아래처럼 예측값과 정답 간 차이를 Loss function으로 설정할 수도 있다. 
 $$L(\hat{y}, y) = \frac{1}{2}(\hat{y} - y)^2$$
-그러나 이렇게 하지 않는 이유는, `gradient descent (모델이 훈련과정에서 찾아야할 미분값)의 최적값을 찾기 힘들다는 단점 때문에 비슷한 역할을 하는 로그 함수를 사용한다. 
+그러나 `gradient descent (모델이 훈련과정에서 찾아야 할, 비용함수가 최소가 되는 값)의 최적값을 찾기 힘들다는 단점` 때문에 비슷한 역할을 하는 로그 함수를 사용한다. 
 
 $$L(\hat{y}, y) = -(ylog\hat{y} + (1-y)log(1-\hat{y}))$$
 
@@ -43,7 +43,7 @@ Gradient Descent
 
 여기서 두가지 개념이 나오는데, Loss function과 cost function 두 개념이 나온다. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI2NDIwNTk4OSwtNDc5NTU1NzA0LC0yMD
+eyJoaXN0b3J5IjpbLTQwNjExNjExNSwtNDc5NTU1NzA0LC0yMD
 I1MDM3MjA4LDExMDY3MjI1MTksOTA4NzU4MDQyLC0xMzczNTgw
 MjVdfQ==
 -->
