@@ -56,8 +56,9 @@ $$w := w - \alpha \frac{dJ(w)}{dw}$$
 
 ![](imgs/1.png)
 
-
+정말 로지스틱 회귀에 하나 레이어가 추가되기만 해도 신경망 모델이라 불린다. 물론 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMjcyMjI2MTddfQ==
+eyJoaXN0b3J5IjpbLTE1NDg0MzI4NDUsLTIwMjcyMjI2MTddfQ
+==
 -->
