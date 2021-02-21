@@ -39,9 +39,9 @@ $$L(\hat{y}, y) = -(ylog\hat{y} + (1-y)log(1-\hat{y}))$$
 
 ---
 ## Gradient Descent
-모델이 어떠한 input을 보다 더 정답에 가깝게 예측하기 위해서는 **비용 함수 J**를 최소화해야 한다. 
+모델이 어떠한 input을 보다 더 정답에 가깝게 예측하기 위해서는 **비용 함수 J**를 최소화해야 한다. 이 비용 함수는 $y$와 $\hat{y}$로 정의되며 그렇기에 파라미터 W와 b로 구성되어 있다. 우리는 이제 비용 함수 J를 최소로 만드는 W와 b를 찾는 것이 목적이다. 이러한 파라미터 W와 b를 찾기 위해 사용되는 알고리즘이 gradient descent algorithm 이며 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MzkzMDk1ODYsLTQ3OTU1NTcwNCwtMj
+eyJoaXN0b3J5IjpbLTE5OTQ2NzI1MzAsLTQ3OTU1NTcwNCwtMj
 AyNTAzNzIwOCwxMTA2NzIyNTE5LDkwODc1ODA0MiwtMTM3MzU4
 MDI1XX0=
 -->
