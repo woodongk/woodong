@@ -50,7 +50,7 @@ $$w := w - \alpha \frac{dJ(w)}{dw}$$
 - $\alpha$ : 학습율. w가 다음에 얼마나 이동할 지에 대한 수치값 
 - $\frac{dJ(w)}{dw}$ :  w의 변화율 (기울기)
 
-모델은 계속해서 위 식을 반복함으로써 w를 새롭게 갱신해나가며 학습을 진행한다. 여기서 나오는 개념이 역전파 개념이다. 그렇다면 더 자세하게, 어떻게 학습이 진행되는가? 는 생략. 유튜브를 찾아보자. 앤드류응 선생님도 말씀하셨지만 세부 수식을 모두 이해할 필요는 업다. 이해하면 좋지만, 요즘은 프레임워크가 대부분 알아서 해준다.
+모델은 계속해서 위 식을 반복함으로써 w를 새롭게 갱신해나가며 학습을 진행한다. 여기서 나오는 개념이 역전파 개념이다. 그렇다면 더 자세하게, 어떻게 학습이 진행되는가? 는 생략. 유튜브를 찾아보자. 앤드류응 선생님도 말씀하셨지만 세부 수식을 모두 이해할 필요는 없으니 부담느끼지 말자. 이해하면 좋지만, 요즘은 프레임워크가 대부분 알아서 해준다. 
 
 
 ---
@@ -59,7 +59,7 @@ $$w := w - \alpha \frac{dJ(w)}{dw}$$
 
 ![](imgs/1.png)
 
-정말 로지스틱 회귀에 하나 레이어가 추가되기만 해도 신경망 모델이라 불린다. 위와 같은 형태의 신경망 모델은 input layer, hidden layer, output layer 총 3가지 레이어가 있는 단순한 형태로, 2-layer 신경망 모델이라 불리운다. **일반적으로 신경망 모델에서 input layer는 수로 안 센다고 한다** 
+이처럼 로지스틱 회귀에 하나 레이어가 추가되기만 해도 신경망 모델이라 불린다. 위와 같은 형태의 신경망 모델은 input layer, hidden layer, output layer 총 3가지 레이어가 있는 단순한 형태로, 2-layer 신경망 모델이라 불리운다. **일반적으로 신경망 모델에서 input layer는 수로 안 센다고 한다** 
 
 ### Activation functions
 모든 학습과 역전파 과정은 로지스틱 회귀 때와 유사하나, 한 층 쌓였다고 파라미터 수가 상당히 복잡해져서 이차 난관이 온다. 일단 새로운 하이퍼파라미터도 추가되는데, 단순히 sigmoid 함수를 사용했던 로지스틱 회귀 모델과 달리 신경망 모델에서는 층마다 activation function(활성 함수)를 달리 설정해주곤 한다. 간단히 활성 함수의 종류와 활용도를 언급하고 마친다.
@@ -100,7 +100,7 @@ hidden layer 수가 적으면 y를 잘 예측하기 위해 많은 노드가 필�
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM4MDgyNTQ4OSwtNjc1MTk3ODQwLDM4Nj
-czNjA0Myw5ODQyNzAzNjEsLTE1NDg0MzI4NDUsLTIwMjcyMjI2
-MTddfQ==
+eyJoaXN0b3J5IjpbLTE3NDA2MDkzNzEsLTY3NTE5Nzg0MCwzOD
+Y3MzYwNDMsOTg0MjcwMzYxLC0xNTQ4NDMyODQ1LC0yMDI3MjIy
+NjE3XX0=
 -->
